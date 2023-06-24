@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/FirstRowRt/stylesheet/reset.css">
     <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto;
+           
+        }
+        
+    </style>
 </head>
+
 <body>
     <div> <!-- header영역 -->
         <header>
@@ -18,13 +28,47 @@
     </div> <!-- header영역 -->
     <div> <!-- content영역 -->
         <content>
+            <div>
+                <article>
 
+                </article>
+            </div>
+            <div>
+                <article>
+                    <!-- 메뉴영역 -->
+                    <nav>
+                        <ul>
+                        <li>전체</li>
+                        <li>문화·예술</li>
+                        <li>운동·액티비티</li>
+                        <li>푸드·드링크</li>
+                        <li>취미</li>
+                        <li>여행·동행</li>
+                        <li>성장·자기계발</li>
+                        <li>동네·또래</li>
+                        <li>연애·소개팅</li>
+                        </ul>
+                    </nav>
+                    <!-- 슬라이드 영역 -->
+                    <div class="container">
+                        <div><a class="item">링크1</a></div>
+                        <div><a class="item">링크2</a></div>
+                        <div><a class="item">링크3</a></div>
+                        <div><a class="item">링크4</a></div>
+                        <div><a class="item">링크5</a></div>
+                        <div><a class="item">링크6</a></div>
+                        <div><a class="item">링크7</a></div>
+                        <div><a class="item">링크8</a></div>
+                    </div>
+                </article>
+            </div>
         </content>
-    </div> <!-- content영역 --> 
+    </div> <!-- content영역 -->
     <div> <!-- footer영역 -->
         <footer>
 
         </footer>
     </div> <!-- footer영역 -->
 </body>
+
 </html>
