@@ -9,13 +9,25 @@
             margin: 0;
             padding: 0;
         }
-        body{
+       
+      body{
+        background-color: red;
+        /* 여기는 색깔 바꿔줘야함 */
+      }
+        header{
+            width: 80%;
+            display: flex;
+            height: 80px;
             padding: 0 10%;
         }
-      
-        header{
-            padding-top: 50px;
-            overflow: hidden;
+        .headleft{
+            flex: 80%;
+            height: 80px;
+        }
+        .headright{
+            flex: 20%;
+            height: 80px;
+            position: relative;
         }
         header .headermenu{
             padding: 0 0 0 40px;
@@ -23,26 +35,48 @@
             text-decoration: none;
             text-align: center;
             color: black;
+            line-height: 80px;
         }
         header .headerlogin{
-            float: right;
+           
             padding-left: 10px;
+            vertical-align: middle;
+            position: absolute;
+            right: 0px;
+            top: 25px;
+            
+        }
+        header .headerlogin1{
+           
+           padding-left: 10px;
+           vertical-align: middle;
+           position: absolute;
+           right: 50px;
+           top: 25px;
+           
+       }
+        .bg{
+            background-color: antiquewhite;
+            /* 여기는 색깔 바꿔줘야함 */
         }
 
 
     </style>
 </head>
 <body>
-    <div>
+    <div class="bg">
     <header>
-        <img src="https://images.munto.kr/munto-web/logo-white.svg?s=128x128" width="99" height="19">
+        <div class="headleft">
+        <img src="/images/icons/#699527 login.png" width="99" height="19">
         <a href="###" class="headermenu">소셜링</a>
         <a href="###" class="headermenu">클럽</a>
         <a href="###" class="headermenu">챌린지</a>
         <a href="###" class="headermenu">라운지</a>
-        <img class="headerlogin" src="http://dummyimage.com/21/eee" >
-        <img class="headerlogin" src="http://dummyimage.com/21/eee" >
-        
+    </div>
+    <div class="headright">
+        <img class="headerlogin" src="http://dummyimage.com/30/eee" >
+        <img class="headerlogin1" src="http://dummyimage.com/30/eee" >
+    </div>
     </header>
 </div>
     <section></section>
