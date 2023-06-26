@@ -7,12 +7,67 @@
     <link rel="stylesheet" href="/FirstRowRt/stylesheet/reset.css">
     <title>Document</title>
     <style>
+        header,
+        content,
+        footer {
+            width: 1200px;
+        }
+
         .container {
             display: grid;
-            grid-template-columns: auto auto;
-           
+            grid-template-columns: repeat(2, 517px);
+            grid-auto-rows: 200px;
+            column-gap: 24px;
+            row-gap: 24px;
+            justify-content: center;
         }
         
+        .container>div {
+            background-color: #fefefe;
+            border-radius: 12px;
+        }
+
+        .item {
+            display: flex;
+            padding: 20px 16px;
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+        .item img {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            margin-right: 16px;
+        }
+        .category_content_card_list {
+            height: auto;
+            width: 300px;
+        }
+        .category_content_card, .socialingcard_info_describe, .socialingcard_info_participants {
+            display: flex;
+            flex-direction: row;
+        }
+        .category_content_card {
+            height: 35px;
+            margin-bottom: 5px;
+        }
+        .socialingcard_info_describe {
+            height: 35px;
+            margin-bottom: 7px;
+        }
+        .socialingcard_info_subject {
+            width: 100%;
+            height: 33px;
+            margin-bottom: 7px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        } 
+        .socialingcard_info_participants {
+            height: 35px;
+            margin-bottom: 3px;
+        }
     </style>
 </head>
 
@@ -38,27 +93,171 @@
                     <!-- 메뉴영역 -->
                     <nav>
                         <ul>
-                        <li>전체</li>
-                        <li>문화·예술</li>
-                        <li>운동·액티비티</li>
-                        <li>푸드·드링크</li>
-                        <li>취미</li>
-                        <li>여행·동행</li>
-                        <li>성장·자기계발</li>
-                        <li>동네·또래</li>
-                        <li>연애·소개팅</li>
+                            <li>전체</li>
+                            <li>문화·예술</li>
+                            <li>운동·액티비티</li>
+                            <li>푸드·드링크</li>
+                            <li>취미</li>
+                            <li>여행·동행</li>
+                            <li>성장·자기계발</li>
+                            <li>동네·또래</li>
+                            <li>연애·소개팅</li>
                         </ul>
                     </nav>
                     <!-- 슬라이드 영역 -->
                     <div class="container">
-                        <div><a class="item">링크1</a></div>
-                        <div><a class="item">링크2</a></div>
-                        <div><a class="item">링크3</a></div>
-                        <div><a class="item">링크4</a></div>
-                        <div><a class="item">링크5</a></div>
-                        <div><a class="item">링크6</a></div>
-                        <div><a class="item">링크7</a></div>
-                        <div><a class="item">링크8</a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag">파티</div>
+                                        <div class="socialingcard_recommend">추천</div>
+                                    </div>
+                                    <div class="socialingcard_info_subject">컬러 플리 : FFFFFFFFFFFFFFFFffffffffffffffffffffffffffffffffffffffFFFFFFFFFFFFFFFFF</div>
+                                    <div class="socialingcard_info_describe">
+                                        <div>소셜링.</div>
+                                        <div>위치</div>
+                                        <div>시간</div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div>그림</div>
+                                        <div>3/10</div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a class="item">
+                                <div><img src="http://via.placeholder.com/500.jpg/" alt=""></div>
+                                <div class="category_content_card_list">
+                                    <div class="category_content_card">
+                                        <div class="socialingcard_tag"></div>
+                                        <div class="socialingcard_recommend"></div>
+                                    </div>
+                                    <div class="socialingcard_info_subject"></div>
+                                    <div class="socialingcard_info_describe">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="socialingcard_info_participants">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </a></div>
                     </div>
                 </article>
             </div>
