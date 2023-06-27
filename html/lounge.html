@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Link href="/FirstRowRt/stylesheet/reset.css" rel="stylesheet">
+
+    <!--head style-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            /* 여기는 색깔 바꿔줘야함 */
+        }
+
+        header {
+            background-color: blueviolet;
+            width: 80%;
+            display: flex;
+            height: 80px;
+            padding: 0 10%;
+        }
+
+        .headleft {
+            flex: 80%;
+            height: 80px;
+        }
+
+        .headright {
+            flex: 20%;
+            height: 80px;
+            position: relative;
+        }
+
+        header .headermenu {
+            padding: 0 0 0 40px;
+            font-size: 1.2em;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            line-height: 80px;
+        }
+
+        header .headerlogin {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            position: absolute;
+            right: 0px;
+            top: 25px;
+
+        }
+
+        header .headerlogin1 {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            position: absolute;
+            right: 50px;
+            top: 25px;
+
+        }
+
+        .bg {
+            background-color: antiquewhite;
+            /* 여기는 색깔 바꿔줘야함 */
+        }
+    </style>
+    <!--body style-->
+    <style>
+
+    </style>
+    <!--feed_cards style-->
+    <style>
+        /* table {
+            border: 1px black solid;
+
+        } */
+
+        .feed_cards>input[type=radio] {
+            display: none;
+        }
+
+        .feed_card .tab-card {
+            display: none;
+        }
+
+        .feed_cards input[type=radio]:nth-of-type(1):checked~.feed_card .tab-card:nth-of-type(1) {
+            display: block;
+        }
+
+        .feed_cards input[type=radio]:nth-of-type(2):checked~.feed_card .tab-card:nth-of-type(2) {
+            display: block;
+        }
+
+        .feed_cards .flex-labels {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .feed_cards .flex-labels>label {
+            display: block;
+            width: 101px;
+            height: 62px;
+            float: left;
+            text-align: center;
+            /* border: 1px solid black; 임시 */
+            box-sizing: border-box;
+            color: #b9b6b6;
+        }
+
+        .feed_cards .labels {
+            overflow: hidden;
+        }
+
+        .feed_cards>input[type=radio]:nth-of-type(1):checked~.flex-labels>label:nth-of-type(1) {
+            color: black;
+        }
+
+        .feed_cards>input[type=radio]:nth-of-type(2):checked~.flex-labels>label:nth-of-type(2) {
+            color: black;
+        }
+
+        .card-table {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardimage {
+            width: 274px;
+            height: 274px;
+            /* border: 1px black solid; */
+            margin: 24px;
+
+        }
+
+        .cardimage .images {
+            width: 274px;
+            height: 274px;
+            border: 1px black solid;
+            border-radius: 16px;
+        }
+
+        .cardtxt {
+            width: 274px;
+            height: 44px;
+        }
+
+        .descript_menu {
+            width: 80%;
+            height: 580px;
+        }
+
+        td {
+            padding: 0 40px 0 0;
+        }
+        td:nth-child(4){
+            padding: 0;
+        }
+    </style>
+    <!--footer style-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        body {
+            padding: 0 10% auto;
+            width: 80% auto;
+        }
+
+        li {
+            list-style-type: none;
+
+        }
+
+        footer {
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            background-color: burlywood;
+            height: 500px;
+        }
+
+        footer li {
+            padding-bottom: 40px;
+        }
+
+        footer div:nth-child(1) {
+            position: absolute;
+            left: 10%;
+            padding-top: 100px;
+        }
+
+        footer div:nth-child(2) {
+            position: absolute;
+            left: 45%;
+            padding-top: 150px;
+
+        }
+
+        footer div:nth-child(3) {
+            position: absolute;
+            right: 10%;
+            padding-top: 150px;
+            clear: both;
+        }
+
+        a:link {
+            color: black;
+
+        }
+
+        a:visited {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="headleft">
+            <img src="/images/icons/#699527 login.png" width="99" >
+            <a href="###" class="headermenu">소셜링</a>
+            <a href="###" class="headermenu">클럽</a>
+            <a href="###" class="headermenu">챌린지</a>
+            <a href="###" class="headermenu">라운지</a>
+        </div>
+        <div class="headright">
+            <img class="headerlogin" src="./#699527 login.png" width="100">
+            <img class="headerlogin1" src="../images/icons/#699527 signup.png">
+        </div>
+    </header>
+    <div class="descript_menu">
+        안녕하세요.
+    </div>
+    <div class="feed_cards">
+        <input type="radio" name="card" id="liked" checked>
+        <input type="radio" name="card" id="review">
+        <div class="flex-labels">
+            <label for="liked">인기 피드</label>
+            <label for="review">모임 후기</label>
+        </div>
+        <div class="feed_card">
+            <div class="tab-card">
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images"><img src="../images/icons/"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                    </tr>
+                </table>
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                    </tr>
+                </table>
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tab-card">
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                    </tr>
+                </table>
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                    </tr>
+                </table>
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images"><img src="./resources/images/butterfly.svg"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                        <td class="cardtxt">텍스트</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <footer>
+            <div>
+                <ul>
+                    <li style="border: 1.2em;">문토 정보</li>
+                    <li><a href="###"> 공지사항</a></li>
+                    <li><a href="###">이벤트</a></li>
+                    <li><a href="###">자주묻는 질문</a></li>
+                    <li><a href="###">채용</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>소셜 미디어</li>
+                    <li><a href="###">인스타그램</a></li>
+                    <li><a href="###">네이버 블로그</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>주식회사 문토</h3>
+                <br>
+                <p>대표: 염호준 | 개인정보관리책임</p>
+                <p>대표: 이지영 | 개인정보관리책임</p>
+                <p>대표: 김종호 | 개인정보관리책임</p>
+            </div>
+        </footer>
+</body>
+
+</html>
