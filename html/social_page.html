@@ -14,22 +14,45 @@
             height: 80px;
             padding: 0 10%;
         }
+
         article {
             background-color: #fff;
         }
+
         /* descript 영역 */
         .descript_menu {
+            display: flex;
             width: 80%;
             height: 500px;
             margin: 0 10%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-
+        .socialing_title {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .socialing_description {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .socialing_description_content {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
         /* 슬라이드 영역 */
         .container {
             display: flex;
             justify-content: center;
             background-color: #e6e1e1;
         }
+
         .category_content {
             display: grid;
             grid-template-columns: repeat(2, 517px);
@@ -110,6 +133,7 @@
             margin-right: 30px;
             align-items: center;
         }
+
         .socialing_category>li:first-of-type {
             align-items: center;
             text-align: center;
@@ -133,7 +157,9 @@
                 <article>
                     <!-- descript 영역 -->
                     <div class="descript_menu">
-                        안녕하세요.
+                        <div class="socialing_title"><img src="" alt="">소셜링</div>
+                        <div class="socialing_description">똑같은 일상을 다채롭게<br>만들어 줄 원데이 취향 모임</div>
+                        <div class="socialing_description_content">누구나 열고 참여할 수 있는 원데이 모임,<br>소셜링으로 가볍고 즐겁게 만나보세요!</div>
                     </div>
                 </article>
             </div>
