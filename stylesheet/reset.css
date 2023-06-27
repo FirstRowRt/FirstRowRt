@@ -10,7 +10,9 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video 
+
+{
 	margin: 0;
 	padding: 0;
 	/* border: 0;
@@ -18,8 +20,13 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline; */
 }
+
+	@font-face {
+		
+	}
+
 body {
-	background-color: #e6e1e1;
+	background-color: #f4f4f4
 }
 /* HTML5 display-role reset for older browsers */
 /* article, aside, details, figcaption, figure, 
@@ -47,3 +54,4 @@ table {
 ul {
 	list-style: none;
 }
+
