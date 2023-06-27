@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/FirstRowRt/stylesheet/reset.css">
+    <!-- <link rel="stylesheet" href="/FirstRowRt/stylesheet/reset.css"> -->
     <title>Document</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-
-        body {
-            padding: 0 10%;
-           
-        }
+        .all-background{
+        background-color: gray;
+       }
+        
 
         header {
             padding-top: 50px;
             overflow: hidden;
+
         }
 
         header .headermenu {
@@ -30,18 +30,20 @@
             color: black;
         }
 
-      
+
 
         .main_header_background {
             position: relative;
             height: 1000px;
+            padding: 0 10%;
         }
 
 
         .sub-head {
             position: absolute;
-            left: 0;
-            top: 250px
+            left: 10%;
+            top: 250px;
+
         }
 
         .mainlogin {
@@ -52,7 +54,7 @@
 
         .main-head-left-bottom {
             position: absolute;
-            right: 0;
+            right: 10%;
             bottom: 0;
         }
 
@@ -62,12 +64,13 @@
 
         .sccr_content_img {
             float: left;
+            margin-top: 50px ;
 
         }
 
         .sccr_content_description {
             float: left;
-            margin: 20px 0;
+            margin: 80px 0;
         }
 
         .sccr_content_box {
@@ -149,344 +152,437 @@
         a:visited {
             color: black;
         }
+
+        .pmg-head {
+            text-align: center;
+
+        }
+
+        .pmg {
+            display: flex;
+            margin: 50px 0;
+        }
+
+        .p-description {
+            width: 40%;
+            margin-top: calc(15vh);
+            margin-left: 20px;
+        }
+
+        .p-description>div {
+            vertical-align: middle;
+        }
+
+        .p-img {
+            width: 60%;
+        }
+
+        .p-img img {
+            width: 100%;
+        }
+
+        .content {
+            background-color: aliceblue;
+            
+            padding: 0 10%
+        }
     </style>
 </head>
 
 <body>
-    <div class="main_header_background">
-        <header>
-            <img src="http://dummyimage.com/99/19" width="99" height="19">
-            <a href="###" class="headermenu">소셜링</a>
-            <a href="###" class="headermenu">클럽</a>
-            <a href="###" class="headermenu">챌린지</a>
-            <a href="###" class="headermenu">라운지</a>
-            
-            <div class="sub-head">
-                <p>
-                <h1>취향으로<br>만나는 우리</h1>
-                </p><br>
-                <p>
-                <h4>관심사 기반 커뮤니티, <strong>문토</h4>
-                </p><br><br>
-                <img class="mainlogin" src="https://images.munto.kr/munto-web/google_white-red.svg">
-                <img class="mainlogin" src="https://images.munto.kr/munto-web/apple_white-red.svg">
+    <div class="all-background">
+        <div class="main_header_background">
+            <header>
+                <img src="http://dummyimage.com/99/19" width="99" height="19">
+                <a href="###" class="headermenu">소셜링</a>
+                <a href="###" class="headermenu">클럽</a>
+                <a href="###" class="headermenu">챌린지</a>
+                <a href="###" class="headermenu">라운지</a>
+
+                <div class="sub-head">
+                    <p>
+                    <h1>취향으로<br>만나는 우리</h1>
+                    </p><br>
+                    <p>
+                    <h4>관심사 기반 커뮤니티, <strong>문토</h4>
+                    </p><br><br>
+                    <img class="mainlogin" src="https://images.munto.kr/munto-web/google_white-red.svg">
+                    <img class="mainlogin" src="https://images.munto.kr/munto-web/apple_white-red.svg">
+                </div>
+                <div>
+                    <img class="main-head-left-bottom"
+                        src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2Fmain_people-desktop.png&w=828&q=75"
+                        width="830px" height="550px" </div>
+
+            </header>
+
+        </div>
+        <div class="content">
+            <div class="sccr">
+                <div class="sccr_description">
+                    <p>★소셜링</p>
+                    <p>
+                    <h2>똑같은 일상을 다채롭게<br>만들어 줄 원데이 취향 모임</h2>
+                    </p>
+                </div>
+                <div class="sccr_content_package">
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+            </div>
+            <div class="sccr">
+                <div class="sccr_description">
+                    <p>★챌린지</p>
+                    <p>
+                    <h2>같은 목표를 가진<br>멤버들과 함께 도전해요</h2>
+                    </p>
+                </div>
+                <div class="sccr_content_package">
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+            </div>
+            <div class="sccr">
+                <div class="sccr_description">
+                    <p>★클럽</p>
+                    <p>
+                    <h2>지속형 모임으로<br>계속해서 친하게 지내요</h2>
+                    </p>
+                </div>
+                <div class="sccr_content_package">
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="sccr_content_box">
+                        <div class="sccr_content">
+                            <div class="sccr_content_img"><img
+                                    src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
+                            </div>
+
+                        </div>
+                        <div class="sccr_content_description">
+                            <div class="sccr_content_description1">맛집투어</div>
+                            <div class="sccr_content_description2">첫모임</div>
+                            <div class="sccr_content_description3">소셜링</div>
+                            <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
+                                    src="http://dummyimage.com/36/ccc"></div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+            </div>
+            <div class="pmg-head">
+                <h1>문토에서 취향이 통하는<br>친구들을 만나요</h1><br>
+                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+
+            </div>
+            <div class="pmg">
+                <div class="p-description">
+                    <div>
+                        <p style="color: red; font-size: 1.5em;">프로필</p><br>
+                        <h1>함께할 멤버들의<br>취향 미리보기</h1><br>
+                        <p>프로필 사진, 자기소개, 관심사, 피드 등<br>취향으로 가득한 멤버들의 프로필로<br>나와 취향이 통하는지 확인할 수 있어요.</p>
+
+                    </div>
+                </div>
+                <div class="p-img">
+                    <img
+                        src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2FSection%2Fprofile-desktop.png&w=640&q=75">
+                </div>
+
+
+
+            </div>
+            <div class="pmg">
+                <div class="p-description">
+                    <div>
+                        <p style="color: red; font-size: 1.5em;">매너 점수</p><br>
+                        <h1>함께 할 멤버들의<br>신뢰도 확인하기</h1><br>
+                        <p>온라인부터 오프라인까지<br>만나게 될 멤버들의 다양한<br>활동 기록을 한눈에 살펴볼 수 있어요.</p>
+
+                    </div>
+                </div>
+                <div class="p-img">
+                    <img
+                        src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2FSection%2Fmanner-score-desktop.png&w=750&q=75">
+                </div>
+
+
+
+            </div>
+            <div class="pmg">
+                <div class="p-img">
+                    <img
+                        src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2FSection%2Fguide-desktop.png&w=828&q=75">
+                </div>
+                <div class="p-description">
+                    <div>
+                        <p style="color: red; font-size: 1.5em;">가이드</p><br>
+                        <h1>확실한 가이드와 운영으로<br>믿을수 있는 커뮤니티</h1><br>
+                        <p>승인제 모임, 멤버 평가, 간편 신고등의<br>관리 시스템과 CX팀의 모니터링으로<br>마음 편히 만날 수 있는 커뮤니티를 만들어요.</p>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <footer>
+            <div>
+                <ul>
+                    <li style="border: 1.2em;">문토 정보</li>
+                    <li><a href="###"> 공지사항</a></li>
+                    <li><a href="###">이벤트</a></li>
+                    <li><a href="###">자주묻는 질문</a></li>
+                    <li><a href="###">채용</a></li>
+                </ul>
             </div>
             <div>
-                <img class="main-head-left-bottom"
-                    src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2Fmain_people-desktop.png&w=828&q=75"
-                    width="830px" height="550px" </div>
-
-        </header>
-
+                <ul>
+                    <li>소셜 미디어</li>
+                    <li><a href="http://instagram.com">인스타그램</a></li>
+                    <li><a href="http://naver.com">네이버 블로그</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>주식회사 문토</h3>
+                <br>
+                <p>대표: 염호준 | 개인정보관리책임</p>
+                <p>대표: 이지영 | 개인정보관리책임</p>
+                <p>대표: 김종호 | 개인정보관리책임</p>
+            </div>
+        </footer>
     </div>
-
-    <div class="sccr">
-        <div class="sccr_description">
-            <p>★소셜링</p>
-            <p>
-            <h2>똑같은 일상을 다채롭게<br>만들어 줄 원데이 취향 모임</h2>
-            </p>
-        </div>
-        <div class="sccr_content_package">
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-        <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
-    </div>
-    <div class="sccr">
-        <div class="sccr_description">
-            <p>★챌린지</p>
-            <p>
-            <h2>같은 목표를 가진<br>멤버들과 함께 도전해요</h2>
-            </p>
-        </div>
-        <div class="sccr_content_package">
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-        <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
-    </div>
-    <div class="sccr">
-        <div class="sccr_description">
-            <p>★클럽</p>
-            <p>
-            <h2>지속형 모임으로<br>계속해서 친하게 지내요</h2>
-            </p>
-        </div>
-        <div class="sccr_content_package">
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="sccr_content_box">
-                <div class="sccr_content">
-                    <div class="sccr_content_img"><img
-                            src="https://images.munto.kr/production-socialing/1687132517797-photo-ifcmi-307783-0?s=256x256">
-                    </div>
-
-                </div>
-                <div class="sccr_content_description">
-                    <div class="sccr_content_description1">맛집투어</div>
-                    <div class="sccr_content_description2">첫모임</div>
-                    <div class="sccr_content_description3">소셜링</div>
-                    <div class="sccr_content_description4"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"><img src="http://dummyimage.com/36/ccc"><img
-                            src="http://dummyimage.com/36/ccc"></div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-        <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
-    </div>
-    <footer>
-        <div>
-            <ul>
-                <li style="border: 1.2em;">문토 정보</li>
-                <li><a href="###"> 공지사항</a></li>
-                <li><a href="###">이벤트</a></li>
-                <li><a href="###">자주묻는 질문</a></li>
-                <li><a href="###">채용</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li>소셜 미디어</li>
-                <li><a href="http://instagram.com">인스타그램</a></li>
-                <li><a href="http://naver.com">네이버 블로그</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3>주식회사 문토</h3>
-            <br>
-            <p>대표: 염호준 | 개인정보관리책임</p>
-            <p>대표: 이지영 | 개인정보관리책임</p>
-            <p>대표: 김종호 | 개인정보관리책임</p>
-        </div>
-    </footer>
 </body>
 
 </html>
