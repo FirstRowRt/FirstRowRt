@@ -78,23 +78,27 @@
             background-color: white;
 
         }
-        .descript_lounge{
+
+        .descript_lounge {
             display: flex;
             flex-direction: column;
             text-align: center;
             justify-content: center;
         }
-        .title_lounge{
+
+        .title_lounge {
             font-size: 24px;
             color: #FF8A7A;
             margin: 0px 0px 24px;
         }
-        .description_lounge{
+
+        .description_lounge {
             font-size: 44px;
             color: black;
             margin: 0px 0px 32px;
         }
-        .content_lounge{
+
+        .content_lounge {
             font-size: 22px;
             color: black;
 
@@ -178,13 +182,20 @@
         .cardimage .images {
             width: 274px;
             height: 274px;
-            border: 1px black solid;
             border-radius: 16px;
+            overflow: hidden;
+        }
+        .cardimage .images img{
+            max-width:100%;
+            max-height: 100%;
         }
 
         .cardtxt {
             width: 274px;
             height: 44px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        
         }
 
         td {
@@ -275,7 +286,7 @@
             <div class="title_lounge">
                 <img class="loungeTitle" src="###" width="24" height="24"> 라운지
             </div>
-            <div class="description_lounge"> 
+            <div class="description_lounge">
                 비슷한 관심사를 가진
                 <br>멤버들의 취향 피드 구독하기
             </div>
@@ -284,7 +295,7 @@
                 <br>언제 어디서나 더 가깝게 연결될 수 있어요
             </div>
         </div>
-        </div>
+    </div>
     <div class="feed_cards">
         <input type="radio" name="card" id="liked" checked>
         <input type="radio" name="card" id="review">
@@ -298,22 +309,22 @@
                     <tr>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=163204">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/1.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=163248">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/2.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=162921">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/3.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=162737">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/4.jpg"></div>
                             </a>
                         </td>
                     </tr>
@@ -328,22 +339,22 @@
                     <tr>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=163444">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/5.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=163102">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/6.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164116">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/7.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=162443">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/8.jpg"></div>
                             </a>
                         </td>
                     </tr>
@@ -358,27 +369,29 @@
                     <tr>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=162500">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/9.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164005">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/10.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=163744">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/11.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164306">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/liked/12.jpg"></div>
                             </a>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162500">텍스트</a></td>
+                        <td class="cardtxt"><a
+                                href="https://www.munto.kr/detail-feed?id=162500">텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트</a>
+                        </td>
                         <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164005">텍스트</a></td>
                         <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163744">텍스트</a></td>
                         <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164306">텍스트</a></td>
@@ -390,22 +403,22 @@
                     <tr>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164660">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/1.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164653">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/2.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164648">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/3.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164639">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/4.jpg"></div>
                             </a>
                         </td>
                     </tr>
@@ -420,22 +433,22 @@
                     <tr>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164634">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/5.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164628">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/6.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164625">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/7.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164622">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/8.jpg"></div>
                             </a>
                         </td>
                     </tr>
@@ -450,22 +463,22 @@
                     <tr>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164619">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/9.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164617">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/10.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164612">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/11.jpg"></div>
                             </a>
                         </td>
                         <td class="cardimage">
                             <a href="https://www.munto.kr/detail-feed?id=164607">
-                                <div class="images"><img src="../images/icons/"></div>
+                                <div class="images"><img src="../images/review/12.jpg"></div>
                             </a>
                         </td>
                     </tr>
