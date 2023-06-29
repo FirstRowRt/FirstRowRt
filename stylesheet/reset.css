@@ -12,6 +12,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video 
 
+
+
 {
 	margin: 0;
 	padding: 0;
@@ -21,9 +23,24 @@ time, mark, audio, video
 	vertical-align: baseline; */
 }
 
-	@font-face {
-		
-	}
+@font-face{ 
+	font-family: Pretendard-Bold;
+	src: url("../fonts/Pretendard-Bold.caa27e3d.woff");
+}
+@font-face {
+	font-family: Pretendard-SemiBold;
+	src: url("../fonts/Pretendard-SemiBold.9b3b0548.woff");
+}
+
+@font-face {
+	font-family: Pretendard-Medium;
+	src: url("../fonts/Pretendard-Medium.36c0da1d.woff");
+}
+
+@font-face {
+	font-family: Pretendard-Regular;
+	src: url("../fonts/Pretendard-Regular.4e0fc985.woff");
+}
 
 body {
 	background-color: #f4f4f4
