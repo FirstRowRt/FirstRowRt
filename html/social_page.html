@@ -14,10 +14,74 @@
             display: flex;
             height: 80px;
             padding: 0 10%;
+            text-decoration: none;
         }
 
         article {
             background-color: #fff;
+        }
+    </style>
+    <!-- header영역 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .combine {
+            background-color: #e6e1e1;
+            display: flex;
+            width: 80%;
+            height: 80px;
+            padding: 0 10%;
+            position: fixed;
+            z-index: 999;
+        }
+
+        .imageLogo {
+            margin: 20px;
+        }
+
+        .headleft {
+            flex: 80%;
+            height: 80px;
+            font-family: Pretendard-Medium;
+
+        }
+
+        .headright {
+            display: flex;
+        }
+
+        header .headermenu {
+            margin: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            line-height: 80px;
+
+        }
+
+        header .headerSignup {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            margin: 20px 0;
+
+        }
+
+        header .headerLogin {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            margin: 20px;
+
+        }
+
+        .bg {
+            background-color: antiquewhite;
+            /* 여기는 색깔 바꿔줘야함 */
         }
     </style>
     <style>
@@ -149,27 +213,48 @@
 </head>
 
 <body>
-    <div> <!-- header영역 -->
-        <header>
-            <div> <!-- nav영역 -->
-                <nav>
 
-                </nav>
-            </div> <!-- nav영역 -->
-        </header>
-    </div> <!-- header영역 -->
+    <header>
+        <div class="combine">
+            <div class="imageLogo">
+                <img src="../images/icons/SEATO jpg.jpg" width="120">
+            </div>
+            <div class="headleft">
+                <a href="###" class="headermenu">소셜링</a>
+                <a href="###" class="headermenu">클럽</a>
+                <a href="###" class="headermenu">챌린지</a>
+                <a href="###" class="headermenu">라운지</a>
+            </div>
+            <div class="headright">
+                <div class="headerSignup">
+                    <img src="../images/icons/SIGNUP jpg.jpg" width="100">
+                </div>
+                <div class="headerLogin">
+                    <img src="../images/icons/LOGIN jpg.jpg" width="100">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div><!--article-->
+        <div class="descript_menu">
+            <div class="descript_lounge">
+                <div class="title_lounge">
+                    <img class="loungeTitle" src="../images/icons/lounge_logo.svg" width="24" height="24"> 라운지
+                </div>
+                <div class="description_lounge">
+                    비슷한 관심사를 가진
+                    <br>멤버들의 취향 피드 구독하기
+                </div>
+                <div class="content_lounge">
+                    나와 비슷한 멤버를 찾아 팔로우하면
+                    <br>언제 어디서나 더 가깝게 연결될 수 있어요
+                </div>
+            </div>
+        </div>
+    </div><!--article-->
     <div> <!-- content영역 -->
         <content>
-            <div>
-                <article>
-                    <!-- descript 영역 -->
-                    <div class="descript_menu">
-                        <div class="socialing_title"><img src="" alt="">소셜링</div>
-                        <div class="socialing_description">똑같은 일상을 다채롭게<br>만들어 줄 원데이 취향 모임</div>
-                        <div class="socialing_description_content">누구나 열고 참여할 수 있는 원데이 모임,<br>소셜링으로 가볍고 즐겁게 만나보세요!</div>
-                    </div>
-                </article>
-            </div>
             <div>
                 <article>
                     <!-- 메뉴영역 -->
