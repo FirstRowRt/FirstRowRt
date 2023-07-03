@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lounge</title>
 
     <Link href="../stylesheet/reset.css" rel="stylesheet">
         
@@ -16,12 +16,14 @@
             margin: 0;
             padding: 0;
         }
-        header {
+        .combine {
             background-color: #e6e1e1;
             display: flex;
             width: 80%;
             height: 80px;
             padding: 0 10%;
+            position: fixed;
+            z-index: 999;
         }
         .imageLogo{
             margin: 20px;
@@ -45,6 +47,7 @@
             text-align: center;
             color: black;
             line-height: 80px;
+
         }
 
         header .headerSignup {
@@ -298,6 +301,7 @@
 
 <body>
     <header>
+        <div class="combine">
         <div class="imageLogo">
             <img src="../images/icons/SEATO jpg.jpg" width="120">
         </div>
@@ -315,6 +319,7 @@
             <img src="../images/icons/LOGIN jpg.jpg"width="100">
             </div>
         </div>
+    </div>
     </header>
     <div class="descript_menu">
         <div class="descript_lounge">
