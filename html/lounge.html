@@ -7,15 +7,16 @@
     <title>Lounge</title>
 
     <Link href="../stylesheet/reset.css" rel="stylesheet">
-        
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
 
     <!--head style-->
     <style>
-        
         * {
             margin: 0;
             padding: 0;
         }
+
         .combine {
             background-color: #e6e1e1;
             display: flex;
@@ -25,10 +26,12 @@
             position: fixed;
             z-index: 999;
         }
-        .imageLogo{
+
+        .imageLogo {
             margin: 20px;
         }
-        .imageLogo>a>img{
+
+        .imageLogo>a>img {
             width: 120px;
             height: 40px;
         }
@@ -73,8 +76,7 @@
         .bg {
             background-color: antiquewhite;
             /* 여기는 색깔 바꿔줘야함 */
-        } 
-       
+        }
     </style>
     <!--body style-->
     <style>
@@ -102,6 +104,7 @@
             font-family: Pretendard-Bold;
 
         }
+
         .description_lounge {
             font-size: 44px;
             color: black;
@@ -127,38 +130,39 @@
             display: none;
         }
 
-        .feed_card{
+        .feed_card {
             display: flex;
-            position:relative;
+            position: relative;
             left: 0;
             transition-property: left;
             transition-duration: 1s;
             padding-bottom: 100px;
         }
 
-        .feed_card .tab-card1{
+        .feed_card .tab-card1 {
             /* display: none; */
             margin-top: 40px;
             margin-right: 10%;
             margin-left: 15%;
-         }
-         .feed_card .tab-card2{
+        }
+
+        .feed_card .tab-card2 {
             margin-top: 40px;
             margin-right: 15%;
             margin-left: 25%;
 
-         }
+        }
 
-        .feed_cards input[type=radio]:nth-of-type(1):checked~.feed_card  {
+        .feed_cards input[type=radio]:nth-of-type(1):checked~.feed_card {
             /* display: block; */
-            left:0;
+            left: 0;
         }
 
         .feed_cards input[type=radio]:nth-of-type(2):checked~.feed_card {
             /* display: block; */
-            left:-100%;
+            left: -100%;
         }
-        
+
 
         .feed_cards .flex-labels {
             display: flex;
@@ -187,7 +191,8 @@
         .feed_cards .labels {
             overflow: hidden;
         }
-        label{
+
+        label {
             font-size: 20px;
             font-family: Pretendard-Medium;
         }
@@ -214,18 +219,28 @@
 
         }
 
+        .imagesHeart>img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
         .cardimage .images {
             width: 274px;
             height: 274px;
             border-radius: 16px;
             overflow: hidden;
         }
-        .cardimage .images img{
-            max-width:100%;
+
+        .cardimage .images img {
+            max-width: 100%;
             max-height: 100%;
         }
 
-        .textLine{
+        .textLine {
             width: 274px;
             height: 44px;
             margin: 10px 0 0 0;
@@ -247,11 +262,12 @@
     </style>
     <!--footer style-->
     <style>
-        .footerBox{
+        .footerBox {
             width: 80%;
             height: 500px;
             padding: 0 10% auto;
         }
+
         * {
             text-decoration: none;
         }
@@ -271,7 +287,8 @@
 
         }
 
-        footer li, p {
+        footer li,
+        p {
             margin: 14px 0;
         }
 
@@ -291,8 +308,9 @@
             right: 10%;
             clear: both;
         }
-        .footerHead{
-            color:  #666;
+
+        .footerHead {
+            color: #666;
         }
 
         a:link {
@@ -309,23 +327,23 @@
 <body>
     <header>
         <div class="combine">
-        <div class="imageLogo">
-            <a href="../html/main_page.html"><img src="../images/icons/SEATO jpg.jpg" ></a>
-        </div>
-        <div class="headleft">
-            <a href="../html/social_page.html" class="headermenu">소셜링</a>
-            <a href="../html/social_page copy.html" class="headermenu">클럽</a>
-            <a href="../html/social_page copy.html" class="headermenu">챌린지</a>
-            <a href="../html/lounge.html" class="headermenu">라운지</a>
-        </div>
-        <div class="headright">
-            <div class="headerSignup">
-               <a href="../html/sign-in.html"> <img src="../images/icons/SIGNUP jpg.jpg" width="100"></a>
+            <div class="imageLogo">
+                <a href="../html/main_page.html"><img src="../images/icons/SEATO jpg.jpg"></a>
             </div>
-            <div class="headerLogin">
-               <a href="../html/loginpage.html"> <img src="../images/icons/LOGIN jpg.jpg" width="100"></a>
+            <div class="headleft">
+                <a href="../html/social_page.html" class="headermenu">소셜링</a>
+                <a href="../html/social_page copy.html" class="headermenu">클럽</a>
+                <a href="../html/social_page copy.html" class="headermenu">챌린지</a>
+                <a href="../html/lounge.html" class="headermenu">라운지</a>
             </div>
-    </div>
+            <div class="headright">
+                <div class="headerSignup">
+                    <a href="../html/sign-in.html"> <img src="../images/icons/SIGNUP jpg.jpg" width="100"></a>
+                </div>
+                <div class="headerLogin">
+                    <a href="../html/loginpage.html"> <img src="../images/icons/LOGIN jpg.jpg" width="100"></a>
+                </div>
+            </div>
     </header>
     <div class="descript_menu">
         <div class="descript_lounge">
@@ -354,104 +372,195 @@
                 <table class="card-table">
                     <tr>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=163204">
-                                <div class="images"><img src="../images/liked/1.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=163204">
+                                    <img src="../images/liked/1.jpg">
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=163248">
-                                <div class="images"><img src="../images/liked/2.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=163248">
+                                    <img src="../images/liked/2.jpg">
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=162921">
-                                <div class="images"><img src="../images/liked/3.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=162921">
+                                    <img src="../images/liked/3.jpg">
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=162737">
-                                <div class="images"><img src="../images/liked/4.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=162737">
+                                    <img src="../images/liked/4.jpg">
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163204"><p class="textLine">이번에도 어김없이 사랑스러운 분들만 오셨어요오..
-                            진쨔 여러분들 왤케 기여우신거죠..</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163248"><p class="textLine">일요일 오후에도 갓생을 위해 참여해주신
-                            15분 정말 진심으로 감사합니다 ✨</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162921"><p class="textLine">2주만에 했던 블랙파티 역시는 역시🖤
-                            미녀3인방의 최강리액션에 좋아 죽는 이번기수 남자들을</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162737"><p class="textLine">[ 컬러플리 8기 후기 🎀 ]
-                            SM 아이돌 그 잡채 8기 핑크 🩷</p></a></td>
-                    </tr>
-                </table>
-                <table class="card-table">
-                    <tr>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=163444">
-                                <div class="images"><img src="../images/liked/5.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=163102">
-                                <div class="images"><img src="../images/liked/6.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164116">
-                                <div class="images"><img src="../images/liked/7.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=162443">
-                                <div class="images"><img src="../images/liked/8.jpg"></div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163444"><p class="textLine">얼렁뚱땅 북클럽 멤버들과 처음으로 피크닉 다녀왔어요🥰
-                            잔뜩 싸가지고 간 유부초밥.</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163102"><p class="textLine">[문토 체육대회 호스트 대전 저녁반 후기- 230624]
-                            💌콜라보 with 윤짜이, cloud
-                            </p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164116"><p class="textLine">회사는 나를 책임져주지 않아도
-                            재하는 나를 책임져 줄지도🤭...?</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162443"><p class="textLine">준비물 : 경건한 마음(?)과 집중을 도와줄 션한 날보 수박슬러시
-                            차차쌤과 함께하는 캘리시간!🙋🏻‍♀️</p></a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163204">
+                                <p class="textLine">이번에도 어김없이 사랑스러운 분들만 오셨어요오..
+                                    진쨔 여러분들 왤케 기여우신거죠..</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163248">
+                                <p class="textLine">일요일 오후에도 갓생을 위해 참여해주신
+                                    15분 정말 진심으로 감사합니다 ✨</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162921">
+                                <p class="textLine">2주만에 했던 블랙파티 역시는 역시🖤
+                                    미녀3인방의 최강리액션에 좋아 죽는 이번기수 남자들을</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162737">
+                                <p class="textLine">[ 컬러플리 8기 후기 🎀 ]
+                                    SM 아이돌 그 잡채 8기 핑크 🩷</p>
+                            </a></td>
                     </tr>
                 </table>
                 <table class="card-table">
                     <tr>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=162500">
-                                <div class="images"><img src="../images/liked/9.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=163444">
+                                    <img src="../images/liked/5.jpg">
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164005">
-                                <div class="images"><img src="../images/liked/10.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=163102">
+                                    <img src="../images/liked/6.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=163744">
-                                <div class="images"><img src="../images/liked/11.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164116">
+                                    <img src="../images/liked/7.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164306">
-                                <div class="images"><img src="../images/liked/12.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=162443">
+                                    <img src="../images/liked/8.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162500"><p class="textLine">안녕하세요 38회차로 돌아온 우리둥지입니다♡
-                                점점 날씨가 더워지고있는거같아요</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164005"><p class="textLine">아주 늦은 후기 3탄🌝
-                            잠이 안 오니까🤣 오늘은 오래오래 기억하고 싶어서</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163744"><p class="textLine">4월 15일 나의 첫 대장소셜이었던 도봉산이 우천으로 실패하고
-                            2개월만에 또봉산 드디어 끝냈다-!</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164306"><p class="textLine">같은 밥을 먹더라도 와인 한 잔과 곁들이면 평소보다 천천히 먹게된다.
-                            그런 와인 한 잔이 주는 여유로움이 참 좋다 난.</p></a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163444">
+                                <p class="textLine">얼렁뚱땅 북클럽 멤버들과 처음으로 피크닉 다녀왔어요🥰
+                                    잔뜩 싸가지고 간 유부초밥.</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163102">
+                                <p class="textLine">[문토 체육대회 호스트 대전 저녁반 후기- 230624]
+                                    💌콜라보 with 윤짜이, cloud
+                                </p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164116">
+                                <p class="textLine">회사는 나를 책임져주지 않아도
+                                    재하는 나를 책임져 줄지도🤭...?</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162443">
+                                <p class="textLine">준비물 : 경건한 마음(?)과 집중을 도와줄 션한 날보 수박슬러시
+                                    차차쌤과 함께하는 캘리시간!🙋🏻‍♀️</p>
+                            </a></td>
+                    </tr>
+                </table>
+                <table class="card-table">
+                    <tr>
+                        <td class="cardimage">
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=162500">
+                                    <img src="../images/liked/9.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164005">
+                                    <img src="../images/liked/10.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=163744">
+                                    <img src="../images/liked/11.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cardimage">
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164306">
+                                    <img src="../images/liked/12.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=162500">
+                                <p class="textLine">안녕하세요 38회차로 돌아온 우리둥지입니다♡
+                                    점점 날씨가 더워지고있는거같아요</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164005">
+                                <p class="textLine">아주 늦은 후기 3탄🌝
+                                    잠이 안 오니까🤣 오늘은 오래오래 기억하고 싶어서</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=163744">
+                                <p class="textLine">4월 15일 나의 첫 대장소셜이었던 도봉산이 우천으로 실패하고
+                                    2개월만에 또봉산 드디어 끝냈다-!</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164306">
+                                <p class="textLine">같은 밥을 먹더라도 와인 한 잔과 곁들이면 평소보다 천천히 먹게된다.
+                                    그런 와인 한 잔이 주는 여유로움이 참 좋다 난.</p>
+                            </a></td>
                     </tr>
                 </table>
             </div>
@@ -459,110 +568,220 @@
                 <table class="card-table">
                     <tr>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164660">
-                                <div class="images"><img src="../images/review/1.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164660">
+                                    <img src="../images/review/1.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164653">
-                                <div class="images"><img src="../images/review/2.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164653">
+                                    <img src="../images/review/2.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164648">
-                                <div class="images"><img src="../images/review/3.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164648">
+                                    <img src="../images/review/3.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164639">
-                                <div class="images"><img src="../images/review/4.jpg"></div>
-                            </a>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164639">
+                                    <img src="../images/review/4.jpg">
+
+                                </a>
+                                <div class="imagesHeart">
+                                    <img src="../images/icons/heartEmpty.png">
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164660"><p class="textLine">평생 후기를 남겨본 일이 손에 꼽는 내가 첨 쓰는 문토 후기,,,
-                            몇 년만에 문토 다시 들어와서 처음으로 간 소셜링이 재하의 낮술반말모임인 건 신의 한수가 아니었을까...?</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164653"><p class="textLine">역대급 인원으로 진행되었던 장롱속 카메라!
-                            저도 최근 소셜링들의 인원제한을 유연하게 풀어가며 진행하고 있습니다.</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164648"><p class="textLine">🎨AI로 높은 완성도의 그림 쉽게 그려봐요🖌
-                            [문토]</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164639"><p class="textLine">날보의 소소한 친목의 시간 🙋‍♂️
-                            특정 사람과 친해질 수 있는 이벤트 소셜링</p></a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164660">
+                                <p class="textLine">평생 후기를 남겨본 일이 손에 꼽는 내가 첨 쓰는 문토 후기,,,
+                                    몇 년만에 문토 다시 들어와서 처음으로 간 소셜링이 재하의 낮술반말모임인 건 신의 한수가 아니었을까...?</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164653">
+                                <p class="textLine">역대급 인원으로 진행되었던 장롱속 카메라!
+                                    저도 최근 소셜링들의 인원제한을 유연하게 풀어가며 진행하고 있습니다.</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164648">
+                                <p class="textLine">🎨AI로 높은 완성도의 그림 쉽게 그려봐요🖌
+                                    [문토]</p>
+                            </a></td>
+                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164639">
+                                <p class="textLine">날보의 소소한 친목의 시간 🙋‍♂️
+                                    특정 사람과 친해질 수 있는 이벤트 소셜링</p>
+                            </a></td>
                     </tr>
                 </table>
                 <table class="card-table">
                     <tr>
                         <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164634">
-                                <div class="images"><img src="../images/review/5.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164628">
-                                <div class="images"><img src="../images/review/6.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164625">
-                                <div class="images"><img src="../images/review/7.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164622">
-                                <div class="images"><img src="../images/review/8.jpg"></div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164634"><p class="textLine">✨문토 여신 Liz님 특강 소셜링 후기✨
-                            후기를 이제서야 작성하는 못난 제자를 용서해주시와요🙏</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164628"><p class="textLine">첫 모임이라 새로운 분들을 만나는 것이 늘 기대되고 긴장되었습니다. 하지만 그런 것들을 잊을 정도로 시선을 사로잡던 탁월한 장소 선정과, 편안한 분위기에서 대화를 이끌어주신 지혜님과,</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164625"><p class="textLine">6월의 살롱드톡_반고흐 시간이었습니다.
-                            외롭고 고독했던 고흐의 시간들,</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164622"><p class="textLine">눈여겨보고 있다 마지막이라 길래 신청한 소셜!
-                            그동안 시간이 안맞아 신청을 미뤄 왔던...!</p></a></td>
-                    </tr>
-                </table>
-                <table class="card-table">
-                    <tr>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164619">
-                                <div class="images"><img src="../images/review/9.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164617">
-                                <div class="images"><img src="../images/review/10.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164612">
-                                <div class="images"><img src="../images/review/11.jpg"></div>
-                            </a>
-                        </td>
-                        <td class="cardimage">
-                            <a href="https://www.munto.kr/detail-feed?id=164607">
-                                <div class="images"><img src="../images/review/12.jpg"></div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164619"><p class="textLine">[준짱's 🥳 칵테일파티]
-                            매번 쓴다 쓴다하고 안쓰고넘어갔다가 이제야쓰는 후기</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164617"><p class="textLine">어둠 다음은 빛이지~!! 이틀 연속 전시소셜 이제나도 문화인😅
-                            전시이름이 빛의 시어터인줄 알았지만...장소였고, 달리&가우디 였다는 새로운 사실을 알게되었다.</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164612"><p class="textLine">100분이 짧게 느껴진 어둠속의 대화
-                            생각해보면 완벽한 어둠속에 있던 적이 없었다... 조금의 빛이라도 있어서 시간이 지나면 적응할 수 있는 어둠이 아닌!!</p></a></td>
-                        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164607"><p class="textLine">🌈하루가 다르게 발전하는 AI 어디까지 써보셨나요🫢
-                            [문토]</p></a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+                            <div class="images" style="position: relative; display: inline-block;">
+                                <a href="https://www.munto.kr/detail-feed?id=164634">
+                                    <img src="../images/review/5.jpg">
+                                    
+                                    </a>
+                                    <div class="imagesHeart">
+                                        <img src="../images/icons/heartEmpty.png">
+                                    </div>
+                                    </div>
+                                    </td>
+                                    <td class="cardimage">
+                                        <div class="images" style="position: relative; display: inline-block;">
+                                            <a href="https://www.munto.kr/detail-feed?id=164628">
+                                                <img src="../images/review/6.jpg">
+                                    
+                                            </a>
+                                            <div class="imagesHeart">
+                                                <img src="../images/icons/heartEmpty.png">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cardimage">
+                                        <div class="images" style="position: relative; display: inline-block;">
+                                            <a href="https://www.munto.kr/detail-feed?id=164625">
+                                                <img src="../images/review/7.jpg">
+                                    
+                                            </a>
+                                            <div class="imagesHeart">
+                                                <img src="../images/icons/heartEmpty.png">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cardimage">
+                                        <div class="images" style="position: relative; display: inline-block;">
+                                            <a href="https://www.munto.kr/detail-feed?id=164622">
+                                                <img src="../images/review/8.jpg">
+                                    
+                                            </a>
+                                            <div class="imagesHeart">
+                                                <img src="../images/icons/heartEmpty.png">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164634">
+                <p class="textLine">✨문토 여신 Liz님 특강 소셜링 후기✨
+                    후기를 이제서야 작성하는 못난 제자를 용서해주시와요🙏</p>
+            </a></td>
+        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164628">
+                <p class="textLine">첫 모임이라 새로운 분들을 만나는 것이 늘 기대되고 긴장되었습니다. 하지만 그런 것들을 잊을 정도로 시선을 사로잡던 탁월한 장소 선정과, 편안한
+                    분위기에서 대화를 이끌어주신 지혜님과,</p>
+            </a></td>
+        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164625">
+                <p class="textLine">6월의 살롱드톡_반고흐 시간이었습니다.
+                    외롭고 고독했던 고흐의 시간들,</p>
+            </a></td>
+        <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164622">
+                <p class="textLine">눈여겨보고 있다 마지막이라 길래 신청한 소셜!
+                    그동안 시간이 안맞아 신청을 미뤄 왔던...!</p>
+            </a></td>
+    </tr>
+    </table>
+    <table class="card-table">
+        <tr>
+            <td class="cardimage">
+                <div class="images" style="position: relative; display: inline-block;">
+                    <a href="https://www.munto.kr/detail-feed?id=164619">
+                        <img src="../images/review/9.jpg">
+
+                    </a>
+                    <div class="imagesHeart">
+                        <img src="../images/icons/heartEmpty.png">
+                    </div>
+                </div>
+            </td>
+            <td class="cardimage">
+                <div class="images" style="position: relative; display: inline-block;">
+                    <a href="https://www.munto.kr/detail-feed?id=164617">
+                        <img src="../images/review/10.jpg">
+
+                    </a>
+                    <div class="imagesHeart">
+                        <img src="../images/icons/heartEmpty.png">
+                    </div>
+                </div>
+            </td>
+            <td class="cardimage">
+                <div class="images" style="position: relative; display: inline-block;">
+                    <a href="https://www.munto.kr/detail-feed?id=164612">
+                        <img src="../images/review/11.jpg">
+
+                    </a>
+                    <div class="imagesHeart">
+                        <img src="../images/icons/heartEmpty.png">
+                    </div>
+                </div>
+            </td>
+            <td class="cardimage">
+                <div class="images" style="position: relative; display: inline-block;">
+                    <a href="https://www.munto.kr/detail-feed?id=164607">
+                        <img src="../images/review/12.jpg">
+
+                    </a>
+                    <div class="imagesHeart">
+                        <img src="../images/icons/heartEmpty.png">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164619">
+                    <p class="textLine">[준짱's 🥳 칵테일파티]
+                        매번 쓴다 쓴다하고 안쓰고넘어갔다가 이제야쓰는 후기</p>
+                </a></td>
+            <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164617">
+                    <p class="textLine">어둠 다음은 빛이지~!! 이틀 연속 전시소셜 이제나도 문화인😅
+                        전시이름이 빛의 시어터인줄 알았지만...장소였고, 달리&가우디 였다는 새로운 사실을 알게되었다.</p>
+                </a></td>
+            <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164612">
+                    <p class="textLine">100분이 짧게 느껴진 어둠속의 대화
+                        생각해보면 완벽한 어둠속에 있던 적이 없었다... 조금의 빛이라도 있어서 시간이 지나면 적응할 수 있는 어둠이 아닌!!</p>
+                </a></td>
+            <td class="cardtxt"><a href="https://www.munto.kr/detail-feed?id=164607">
+                    <p class="textLine">🌈하루가 다르게 발전하는 AI 어디까지 써보셨나요🫢
+                        [문토]</p>
+                </a></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+
+    <script>
+        $(".imagesHeart").on("click", function () {
+            var src = $(this).children("img").prop("src");
+            console.log(src.includes("heartEmpty.png"));
+            if (src.includes("heartEmpty.png")) {
+                $(this).children("img").prop("src", "../images/icons/heartFull.png");
+            } else {
+                $(this).children("img").prop("src", "../images/icons/heartEmpty.png");
+            }
+        });
+
+    </script>
 
 
-        <footer>
-            <div class="footerBox">
+    <footer>
+        <div class="footerBox">
             <div>
                 <ul>
                     <li class="footerHead">문토 정보</li>
@@ -587,7 +806,7 @@
                 <p>대표: 김종호 | 개인정보관리책임</p>
             </div>
         </div>
-        </footer>
+    </footer>
 </body>
 
 </html>
