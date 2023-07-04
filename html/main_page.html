@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" href="../FirstRowRt/stylesheet/reset.css"> -->
     <title>Document</title>
     <link href="../stylesheet/reset.css" rel="stylesheet">
+    <script src="/scripts/jquery-3.7.0.js"></script>
     <style>
         * {
             margin: 0;
@@ -85,7 +86,14 @@
 
         .sccr_content_description {
             float: left;
-            margin: 80px 0;
+            margin: 100px 0 30px 30px;
+        }
+
+        .sccr_content_description img {
+            padding-right: 10px;
+            padding-top: 10px;
+
+
         }
 
         .sccr_content_box {
@@ -126,7 +134,7 @@
         .viewmore input {
             width: 80px;
             height: 80px;
-            border-radius: 10%;
+            border-radius: 50%;
             border: 1px black solid;
         }
 
@@ -210,28 +218,50 @@
             padding: 0 10%
         }
 
-        #eg1:hover #eg{
+        #eg1:hover div {
             opacity: 1;
         }
 
         #eg1 {
-            width: 550px;
+            width: 100%;
             height: 300px;
             overflow: hidden;
-            position: relative;
+
 
         }
 
-        #eg1 img {
+        #eg1>div {
+            padding-top: 20px;
             opacity: 0;
             transition: opacity 0.2s ease;
             /* z-index: 999; */
-            position: absolute;
-            right: 10%;
             bottom: 0;
+            width: 25%;
+            height: 300px;
             
+            float: left;
+            text-align: center;
+
+        }
+        #eg1>div>a{ 
+            display: block;
+            padding-top: 30px;
+            z-index: 9999;
         }
     </style>
+    <script>
+        $(loadedHandler);
+        function loadedHandler() {
+            $("#viewmore1").on("click", addContentHandler)
+        }
+        function addContentHandler() {
+            var sccr = $(this).parent().prev();
+            console.log(sccr);
+            $(this).parents(".sccr_description").insertAfter(sccr);
+            console.log(this);
+        }
+
+    </script>
 </head>
 
 <body>
@@ -245,7 +275,32 @@
                     <a href="../html/social_page copy.html" class="headermenu">챌린지</a>
                     <a href="../html/lounge.html" class="headermenu">라운지</a>
                     <div id="eg1">
-                        <img id="eg" src="https://search.pstatic.net/common?type=b&size=216&expire=1&refresh=true&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202302%2F20230226231041753.jpg">
+                        <div>
+                            <div>소셜링</div>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                        </div>
+                        <div>
+                            <div>클럽</div>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            
+
+                        </div>
+                        <div>
+                            <div>챌린지</div>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                        </div>
+                        <div>
+                            <div>라운지</div>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                            <a href="../html/social_page copy.html">소셜링으로 가기1</a>
+                        </div>
                     </div>
                     <div class="sub-head">
                         <p>
@@ -262,13 +317,13 @@
                         <img class="main-head-left-bottom"
                             src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2Fmain_people-desktop.png&w=828&q=75"
                             width="830px" height="550px">
-                          
+
                     </div>
 
                 </header>
-                
+
             </div>
-          
+
         </div>
         <div class="content">
             <div class="sccr">
@@ -363,7 +418,7 @@
 
                     </div>
                 </div>
-                <div class="viewmore"><a href="../html/social_page copy.html"><input type="button" value="더보기"></a>
+                <div class="viewmore"><input type="button" value="더보기" id="viewmore1">
                 </div>
             </div>
             <div class="sccr">
