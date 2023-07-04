@@ -6,7 +6,7 @@
     <title>Document</title>
     <link href="../stylesheet/reset.css" rel="stylesheet">
     <style>
-        *{
+        /* {
             margin: 0;
             padding: 0;
             font-family: Pretendard-Bold;
@@ -14,7 +14,7 @@
        
       body{
         background-color: #e6e1e1
-        /* 여기는 색깔 바꿔줘야함 */
+    
       }
         header{
             width: 80%;
@@ -60,30 +60,67 @@
        }
         .bg{
             background-color: antiquewhite;
-            /* 여기는 색깔 바꿔줘야함 */
+
+        } 
+        */
+
+        header .headermenu {
+            margin: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            line-height: 80px;
+            
+
+        }
+        .headermenu:hover{
+            text-decoration: underline 0.1em;
+            text-underline-offset: 0.5em;
+        }
+
+        header .headerSignup {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            margin: 20px 0;
+
+        }
+
+        header .headerLogin {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            margin: 20px;
+
+        }
+
+        .bg {
+            background-color: antiquewhite;
         }
 
     </style>
 </head>
 <body>
-    <div class="bg">
     <header>
-        <div class="headleft">
-        <img src="../images/icons/#699527 login.png" width="99" height="19">
-        <a href="###" class="headermenu">소셜링</a>
-        <a href="###" class="headermenu">클럽</a>
-        <a href="###" class="headermenu">챌린지</a>
-        <a href="###" class="headermenu">라운지</a>
-    </div>
-    <div class="headright">
-        <img class="headerlogin" src="http://dummyimage.com/30/eee" >
-        <img class="headerlogin1" src="http://dummyimage.com/30/eee" >
-    </div>
+        <div class="combine">
+            <div class="imageLogo">
+                <a href="../html/main_page.html"><img src="../images/icons/SEATO jpg.jpg"></a>
+            </div>
+            <div class="headleft">
+                <a href="../html/social_page.html" class="headermenu">소셜링</a>
+                <a href="../html/social_page.html" class="headermenu">클럽</a>
+                <a href="../html/social_page.html" class="headermenu">챌린지</a>
+                <a href="../html/lounge.html" class="headermenu">라운지</a>
+            </div>
+            <div class="headright">
+                <div class="headerSignup">
+                    <a href="../html/sign-in.html"> <img src="../images/icons/SIGNUP jpg.jpg" width="100"></a>
+                </div>
+                <div class="headerLogin">
+                    <a href="../html/loginpage.html"> <img src="../images/icons/LOGIN jpg.jpg" width="100"></a>
+                </div>
+            </div>
     </header>
-</div>
-    <section></section>
-    <footer>asdfsdf</footer>
-    <h1 class="font-check1">asdfsdf</h1>
-    <h1 class="font-check2">asdfsdf</h1>
 </body>
 </html>
