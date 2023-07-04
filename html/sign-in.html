@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../stylesheet/reset.css" rel="stylesheet">
+    <script src="/scripts/jquery-3.7.0.js"></script>
     <style>
         * {
             margin: 0;
@@ -50,7 +51,15 @@
         /* #nextbutton >a{
             width: 100%;
         } */
-        #nextbutton>button{
+        #nextbutton>a>button{
+            width: 100%;
+            background-color:#FF8A7A;
+            color: aliceblue;
+            height: 50px;
+            border-radius: 5%;
+            font-size: 30px;
+        }
+        #nextbutton>a{
             width: 100%;
             background-color:#FF8A7A;
             color: aliceblue;
@@ -71,6 +80,20 @@
             color: black;
         }
     </style>
+    <script>
+        $(loadedHandler);
+        function loadedHandler(){
+            $("#alladmit").on("click", allAdmitHandler);
+            
+        }
+       
+        function allAdmitHandler(){
+           
+            var allchecked = $(this).prop("checked");
+            $(".admit").prop("checked", allchecked);
+        }
+       
+    </script>
 </head>
 
 <body>
@@ -87,29 +110,29 @@
                     </div>
                 </div>
                 <div>
-                    <input type="radio" name="admit1" id="admit1" required><label>[필수]네이버 이용약관</label>
+                    <input type="checkbox" name="admit1" class="admit" required><label>[필수]네이버 이용약관</label>
                     <iframe src="../html/네이버 이용약관.ini" ></iframe>
                 </div>
                 <div>
-                    <input type="radio" name="admit2" id="admit2" required><label>[필수] 개인정보 수집 및 이용 </label>
+                    <input type="checkbox" name="admit2" class="admit" required><label>[필수] 개인정보 수집 및 이용 </label>
                     <iframe src="../html/네이버 이용약관.ini" ></iframe>
                 </div>
                 <div>
-                    <input type="checkbox" name="admit3" id="admit3" ><label>[선택]실명 인증된 아이디로 가입</label>
+                    <input type="checkbox" name="admit3" class="admit" ><label>[선택]실명 인증된 아이디로 가입</label>
                     <iframe src="../html/네이버 이용약관.ini" ></iframe>
                 </div>
                 <div>
-                    <input type="checkbox" name="admit4" id="admit4" ><label>[선택]위치기반서비스 이용약관</label>
+                    <input type="checkbox" name="admit4" class="admit" ><label>[선택]위치기반서비스 이용약관</label>
                     <iframe src="../html/네이버 이용약관.ini" ></iframe>
                 </div>
                 <div>
-                    <input type="checkbox" name="admit5" id="admit5" ><label>[선택] 이벤트・혜택 정보 수신</label>
+                    <input type="checkbox" name="admit5" class="admit" ><label>[선택] 이벤트・혜택 정보 수신</label>
                     <iframe src="../html/네이버 이용약관.ini" ></iframe>
                 </div>
                 <div>
                     <a href="https://nid.naver.com/user2/join/groupJoin?lang=ko_KR"><p>단체, 비즈니스 회원 가입</p></a>
                 </div>
-                <div  id="nextbutton"><button type="submit">다음</button></div>
+                <div  id="nextbutton"><a href="../html/sign-in-confirm.html"><button type="submit">다음</button></a></div>
             </div>
         </div>
     </div>
