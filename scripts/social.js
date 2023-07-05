@@ -1,4 +1,4 @@
-// 변수 초기화값
+// 변수 선언
 var pageNum = 0;
 var count = 0;
 var newCard = `<div class='container1'>
@@ -192,26 +192,26 @@ var newCard = `<div class='container1'>
 </div>`;
 
 $(window).scroll(function () {
-    console.log("-----스크롤이 움직이면 실행-----");
+    // 스크롤이 움직이면 실행
     var scrT = $(window).scrollTop();
     if (scrT > 900 && count < 1) {
-        console.log("-----스크롤이 특정 높이 이상이 되면 실행-----");
+        // 스크롤이 특정 높이 이상이 되면 실행
         $("#swiper-slide" + pageNum).append(newCard);
-        console.log("-----해당 Grid에서 Content append-----");
+        // 해당 Grid에서 Content append
         count += 1;
-        console.log("-----count값 +1-----");
+        // count값 +1
     }
 });
 $(".socialing_category_item").on("click", function () {
-    console.log("-----categoty item click-----");
+    // categoty item click
     $(".container1").remove();
-    console.log("-----append된 Content노드 제거-----");
+    // append된 Content노드 제거
     count = 0;
-    console.log("-----count값 초기화-----");
+    // count값 초기화
     clickItem = this;
     $(".socialing_category_item").parent().children().each(function (idx, item) {
         if (clickItem == item) {
-            console.log("현재 Grid창 index번호를 저장");
+            console.log("현재 Grid창 index번호를");
             return pageNum = idx;
         }
     });
