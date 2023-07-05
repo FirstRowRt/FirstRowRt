@@ -90,14 +90,12 @@
         #eg1:hover div {
             opacity: 1;
         }
-
         #eg1 {
             width: 50%;
             height: 300px;
             overflow: hidden;
             padding: 0 20%;
         }
-
         #eg1>div {
             margin-top: 20px;
             opacity: 0;
@@ -106,19 +104,12 @@
             bottom: 0;
             width: 25%;
             height: 300px;
-
             float: left;
             text-align: center;
-
-
         }
-
-
         #eg1>div>a {
             display: block;
             padding-top: 30px;
-            /* z-index: 9999; */
-
         }
 
         .headermenu:hover {
@@ -142,6 +133,7 @@
                 width: 80%;
                 height: 50%;
             }
+           
             #hiddenmenu:hover #eg1{
                     opacity: 1;
             }
@@ -295,16 +287,15 @@
             $("#viewmore1").on("click", addContentHandler)
         }
         function addContentHandler() {
-            var sccr = $(this).parent().prev();
-            console.log(sccr);
-            $(this).parents(".sccr_description").insertAfter(sccr);
-            console.log(this);
+            var htmlVal =   $(this).parent().prev().html();
+            $(this).parent().prev().append(htmlVal);
         }
       
     </script>
 </head>
 
 <body>
+    
     <div class="all-background">
         <div class="main_header_background1">
             <div class="main_header_background2">
@@ -374,7 +365,7 @@
                     <h2>똑같은 일상을 다채롭게<br>만들어 줄 원데이 취향 모임</h2>
                     </p>
                 </div>
-                <div class="sccr_content_package">
+                <div class="sccr_content_package" id="aaa">
                     <div class="sccr_content_box">
                         <div class="sccr_content">
                             <div class="sccr_content_img"><img
@@ -458,8 +449,10 @@
 
 
                     </div>
+
                 </div>
-                <div class="viewmore"><input type="button" value="더보기" id="viewmore1">
+                <div class="viewmore">
+                    <input type="button" value="더보기" id="viewmore1">
                 </div>
             </div>
             <div class="sccr">

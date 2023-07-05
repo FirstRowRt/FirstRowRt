@@ -96,41 +96,82 @@
         }
     </style>
     <style>
-        footer {
+      @media(max-width:900px) {
+        .all-background {
+            width: 100%;
 
+        }
+        footer{
+            /* padding: 0 35%; */
+            display: inline;
+        }
+        .footerdiv{
+            padding: 20px 0 0 0;
+        }
+        .footerdiv:nth-child(1),
+    .footerdiv:nth-child(3) {
+      
+       opacity: 0;
+     
+    }
+   
+    .footerdiv:nth-child(2){
+        padding: 0;
+        margin: 0;
+    }
+    .body-width {
+        padding: 10% 20% 5% 20%;
+    }
+    .member-info{
+            width: 100%;
             text-align: center;
-            background-color: #e6e1e1;
-            height: 300px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        footer li {
-            padding-bottom: 30px;
-        }
-
-        .footerdiv {
-            flex: 1;
-            margin: 0 10px;
-        }
-
-        .footerdiv:nth-child(1) {
-            padding-top: 50px;
-        }
-
-        .footerdiv:nth-child(2),
-        .footerdiv:nth-child(3) {
-            padding-top: 100px;
-        }
-
-        a:link {
-            color: black;
+            overflow: hidden;
+            margin: 200px 0 100px 0;
+            padding: 20px;
+            border: 1px solid #FF8A7A;
+           
+            box-sizing: border-box;
+            border-radius: 5%;
 
         }
+    }
+</style>
+<style>
+    footer {
 
-        a:visited {
-            color: black;
-        }
+        text-align: center;
+        background-color: #e6e1e1;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer li {
+        padding-bottom: 30px;
+    }
+
+    .footerdiv {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .footerdiv:nth-child(1) {
+        padding-top: 50px;
+    }
+
+    .footerdiv:nth-child(2),
+    .footerdiv:nth-child(3) {
+        padding-top: 100px;
+    }
+
+    a:link {
+        color: black;
+
+    }
+
+    a:visited {
+        color: black;
+    }
     </style>
 </head>
 
