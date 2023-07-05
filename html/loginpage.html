@@ -79,39 +79,39 @@
         label{
             padding: 5px;
         }
+     
+/* label:nth-child(1){
+    padding-right: 15px;
+} */
+    </style>
+     <style>
         footer {
-            position: relative;
+            margin: 0 10%;
             text-align: center;
-            text-decoration: none;
             background-color: #e6e1e1;
             height: 300px;
-           padding: 0;
+            display: flex;
+            justify-content: space-between;
         }
 
         footer li {
             padding-bottom: 30px;
         }
 
-        footer div:nth-child(1) {
-            position: absolute;
-            left: 10%;
+        .footerdiv {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .footerdiv:nth-child(1) {
             padding-top: 50px;
-            text-decoration: none;
         }
 
-        footer div:nth-child(2) {
-            position: absolute;
-            left: 45%;
+        .footerdiv:nth-child(2),
+        .footerdiv:nth-child(3) {
             padding-top: 100px;
-
         }
 
-        footer div:nth-child(3) {
-            position: absolute;
-            right: 10%;
-            padding-top: 100px;
-            clear: both;
-        }
         a:link {
             color: black;
 
@@ -120,9 +120,6 @@
         a:visited {
             color: black;
         }
-/* label:nth-child(1){
-    padding-right: 15px;
-} */
     </style>
 </head>
 

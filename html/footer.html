@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../stylesheet/reset.css">
     <style>
-         * {
+         /* * {
             margin: 0;
             padding: 0;
             text-decoration: none;
@@ -24,7 +24,6 @@
             position: relative;
             text-align: center;
             text-decoration: none;
-            /* background-color: burlywood; */ /*background 투명이라 주석처리해뒀습니다.*/
             height: 500px;
         }
         footer li{
@@ -54,34 +53,97 @@
         a:visited{
             color: black;
         }
-        
+         */
+
+         .footerBox {
+            width: 80%;
+            height: 500px;
+            padding: 0 10% auto;
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        footer {
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            height: 500px;
+            font-family: Pretendard-Semibold;
+            font-size: 14px;
+            padding-top: 80px;
+
+        }
+
+        footer li,
+        p {
+            margin: 14px 0;
+        }
+
+        footer div:nth-child(1) {
+            position: absolute;
+            left: 10%;
+        }
+
+        footer div:nth-child(2) {
+            position: absolute;
+            left: 45%;
+
+        }
+
+        footer div:nth-child(3) {
+            position: absolute;
+            right: 10%;
+            clear: both;
+        }
+
+        .footerHead {
+            color: #666;
+        }
+
+        a:link {
+            color: black;
+
+        }
+
+        a:visited {
+            color: black;
+        }
+
     </style>
 </head>
 <body>
     <footer>
-        <div>
-        <ul>
-            <li style="border: 1.2em;">문토 정보</li>
-            <li><a href="###"> 공지사항</a></li>
-            <li><a href="###">이벤트</a></li>
-            <li><a href="###">자주묻는 질문</a></li>
-            <li><a href="###">채용</a></li>
-        </ul>
+ <div class="footerBox">
+            <div>
+                <ul>
+                    <li class="footerHead">문토 정보</li>
+                    <li><a href="###"> 공지사항</a></li>
+                    <li><a href="###">이벤트</a></li>
+                    <li><a href="###">자주묻는 질문</a></li>
+                    <li><a href="###"></a></li>
+                    <li><a href="###">채용</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="footerHead">소셜 미디어</li>
+                    <li><a href="###">인스타그램</a></li>
+                    <li><a href="###">네이버 블로그</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footerHead">주식회사 문토</p>
+                <p>대표: 염호준 | 개인정보관리책임</p>
+                <p>대표: 이지영 | 개인정보관리책임</p>
+                <p>대표: 김종호 | 개인정보관리책임</p>
+            </div>
         </div>
-        <div>
-        <ul>
-            <li>소셜 미디어</li>
-            <li><a href="http://instagram.com">인스타그램</a></li>
-            <li><a href="http://naver.com">네이버 블로그</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>주식회사 문토</h3>
-        <br>
-        <p>대표: 염호준 | 개인정보관리책임</p>
-        <p>대표: 이지영 | 개인정보관리책임</p>
-        <p>대표: 김종호 | 개인정보관리책임</p>
-    </div>
     </footer>
 </body>
 </html>

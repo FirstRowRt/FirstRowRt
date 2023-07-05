@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/FirstRowRt/stylesheet/reset.css"> -->
+    <!-- <link rel="stylesheet" href="../FirstRowRt/stylesheet/reset.css"> -->
     <title>Document</title>
     <link href="../stylesheet/reset.css" rel="stylesheet">
+    <script src="/scripts/jquery-3.7.0.js"></script>
     <style>
         * {
             margin: 0;
@@ -14,41 +15,47 @@
             font-family: Pretendard-Regular;
         }
 
-        .all-background {
-            background-color: #f4f4f4;
-        }
-
-
-        header>a> img {
-            width: 150px;
-            height: 50px;
-        }
-        header {
-            padding-top: 50px;
-            overflow: hidden;
-            background-color: #e6e1e1;
-            ;
-
-        }
-
-        header .headermenu {
-            padding: 0 0 0 40px;
-            font-size: 1.2em;
-            text-decoration: none;
-            text-align: center;
-            color: black;
-        }
-
-
-
         .main_header_background1 {
-           background-color: #e6e1e1;
+            background-color: #e6e1e1;
         }
+
         .main_header_background2 {
             position: relative;
             height: 1000px;
             padding: 0 10%;
         }
+
+        .all-background {
+            background-color: #f4f4f4;
+        }
+    </style>
+    <style>
+         header>a{
+            height: 80px;
+         }
+        header>a>img {
+            width: 15%;
+            height: 50px;
+        }
+
+        header {
+            padding-top: 50px;
+            overflow: hidden;
+            background-color: #e6e1e1;
+
+
+        }
+
+        header .headermenu {
+          padding: 0 0 20px 40px;
+            font-size: 1.2em;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+       
+
+
 
 
         .sub-head {
@@ -68,8 +75,44 @@
             position: absolute;
             right: 10%;
             bottom: 0;
+            z-index: 900;
         }
 
+        #eg1:hover div {
+            opacity: 1;
+        }
+
+        #eg1 {
+            width: 50%;
+            height: 300px;
+            overflow: hidden;
+            padding: 0 20%;
+        }
+
+        #eg1>div {
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            /* z-index: 999; */
+            bottom: 0;
+            width: 25%;
+            height: 300px;
+
+            float: left;
+            text-align: center;
+           
+
+        }
+     
+
+        #eg1>div>a {
+            display: block;
+            padding-top: 30px;
+            /* z-index: 9999; */
+
+        }
+    </style>
+    <style>
         .sccr_content {
             overflow: hidden;
         }
@@ -82,7 +125,14 @@
 
         .sccr_content_description {
             float: left;
-            margin: 80px 0;
+            margin: 100px 0 30px 30px;
+        }
+
+        .sccr_content_description img {
+            padding-right: 10px;
+            padding-top: 10px;
+
+
         }
 
         .sccr_content_box {
@@ -117,52 +167,19 @@
             box-sizing: border-box;
             text-align: center;
             padding: 45px;
+
+        }
+
+        .viewmore input {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px black solid;
         }
 
         li {
             list-style-type: none;
 
-        }
-
-        footer {
-            position: relative;
-            text-align: center;
-            text-decoration: none;
-            background-color: #e6e1e1;
-            height: 300px;
-        }
-
-        footer li {
-            padding-bottom: 30px;
-        }
-
-        footer div:nth-child(1) {
-            position: absolute;
-            left: 10%;
-            padding-top: 50px;
-        }
-
-        footer div:nth-child(2) {
-            position: absolute;
-            left: 45%;
-            padding-top: 100px;
-
-        }
-
-        footer div:nth-child(3) {
-            position: absolute;
-            right: 10%;
-            padding-top: 100px;
-            clear: both;
-        }
-
-        a:link {
-            color: black;
-
-        }
-
-        a:visited {
-            color: black;
         }
 
         .pmg-head {
@@ -199,19 +216,96 @@
             padding: 0 10%
         }
     </style>
+    <style>
+        footer {
+          
+            text-align: center;
+            background-color: #e6e1e1;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer li {
+            padding-bottom: 30px;
+        }
+
+        .footerdiv {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .footerdiv:nth-child(1) {
+            padding-top: 50px;
+        }
+
+        .footerdiv:nth-child(2),
+        .footerdiv:nth-child(3) {
+            padding-top: 100px;
+        }
+
+        a:link {
+            color: black;
+
+        }
+
+        a:visited {
+            color: black;
+        }
+    </style>
+    <script>
+        $(loadedHandler);
+        function loadedHandler() {
+            $("#viewmore1").on("click", addContentHandler)
+        }
+        function addContentHandler() {
+            var sccr = $(this).parent().prev();
+            console.log(sccr);
+            $(this).parents(".sccr_description").insertAfter(sccr);
+            console.log(this);
+        }
+
+    </script>
 </head>
 
 <body>
     <div class="all-background">
         <div class="main_header_background1">
             <div class="main_header_background2">
-                <header> 
-                    <a href="/html/main_page.html"><img src="/images/icons/SEATO jpg.jpg" ></a>
-                    <a href="/html/social_page copy.html" class="headermenu">소셜링</a>
-                    <a href="/html/social_page copy.html" class="headermenu">클럽</a>
-                    <a href="/html/social_page copy.html" class="headermenu">챌린지</a>
-                    <a href="/html/lounge.html" class="headermenu">라운지</a>
+                <header>
+                    <a href="../html/main_page.html"><img src="/images/icons/SEATO jpg.jpg"></a>
+                    <a href="../html/social_page copy.html" class="headermenu">소셜링</a>
+                    <a href="../html/social_page copy.html" class="headermenu">클럽</a>
+                    <a href="../html/social_page copy.html" class="headermenu">챌린지</a>
+                    <a href="../html/lounge.html" class="headermenu">라운지</a>
+                    <div id="eg1">
+                        <div>
+                            <div>소셜링</div>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                        </div>
+                        <div>
+                            <div>클럽</div>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
 
+
+                        </div>
+                        <div>
+                            <div>챌린지</div>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                        </div>
+                        <div>
+                            <div>라운지</div>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                            <a href="../html/social_page copy.html">소셜링</a>
+                        </div>
+                    </div>
                     <div class="sub-head">
                         <p>
                         <h1>취향으로<br>만나는 우리</h1>
@@ -219,17 +313,21 @@
                         <p>
                         <h4>관심사 기반 커뮤니티, <strong>문토</h4>
                         </p><br><br>
-                        <a href="/html/loginpage.html"><img class="mainlogin" src="https://images.munto.kr/munto-web/google_white-red.svg">
-                        <img class="mainlogin" src="https://images.munto.kr/munto-web/apple_white-red.svg"></a>
+                        <a href="../html/loginpage.html"><img class="mainlogin"
+                                src="https://images.munto.kr/munto-web/google_white-red.svg">
+                            <img class="mainlogin" src="https://images.munto.kr/munto-web/apple_white-red.svg"></a>
                     </div>
                     <div>
                         <img class="main-head-left-bottom"
                             src="https://www.munto.kr/_next/image?url=https%3A%2F%2Fimages.munto.kr%2Fmunto-web%2Fmain_people-desktop.png&w=828&q=75"
                             width="830px" height="550px">
-                        </div>
+
+                    </div>
 
                 </header>
+
             </div>
+
         </div>
         <div class="content">
             <div class="sccr">
@@ -324,7 +422,8 @@
 
                     </div>
                 </div>
-                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+                <div class="viewmore"><input type="button" value="더보기" id="viewmore1">
+                </div>
             </div>
             <div class="sccr">
                 <div class="sccr_description">
@@ -418,7 +517,8 @@
 
                     </div>
                 </div>
-                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+                <div class="viewmore"><a href="../html/social_page copy.html"><input type="button" value="더보기"></a>
+                </div>
             </div>
             <div class="sccr">
                 <div class="sccr_description">
@@ -512,11 +612,13 @@
 
                     </div>
                 </div>
-                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+                <div class="viewmore"><a href="../html/social_page copy.html"><input type="button" value="더보기"></a>
+                </div>
             </div>
             <div class="pmg-head">
                 <h1>문토에서 취향이 통하는<br>친구들을 만나요</h1><br>
-                <div class="viewmore"><img src="http://dummyimage.com/80/aaa"></div>
+                <div class="viewmore"><a href="../html/social_page copy.html"><input type="button" value="더보기"></a>
+                </div>
 
             </div>
             <div class="pmg">
@@ -572,7 +674,7 @@
             </div>
         </div>
         <footer>
-            <div>
+            <div class="footerdiv">
                 <ul>
                     <li style="border: 1.2em;">문토 정보</li>
                     <li><a href="###"> 공지사항</a></li>
@@ -581,14 +683,14 @@
                     <li><a href="###">채용</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="footerdiv">
                 <ul>
                     <li>소셜 미디어</li>
                     <li><a href="http://instagram.com">인스타그램</a></li>
                     <li><a href="http://naver.com">네이버 블로그</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="footerdiv">
                 <h3>주식회사 문토</h3>
                 <br>
                 <p>대표: 염호준 | 개인정보관리책임</p>

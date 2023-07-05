@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../stylesheet/reset.css" rel="stylesheet">
+    <script src="/scripts/jquery-3.7.0.js"></script>
     <style>
         * {
             margin: 0;
@@ -14,11 +15,11 @@
         }
 
         .body-bg {
-            background-color:#e6e1e1;
+            background-color: #e6e1e1;
         }
 
         .body-width {
-            padding: 0 35% ;
+            padding: 0 35%;
             overflow: hidden;
         }
 
@@ -27,41 +28,58 @@
             color: gray;
             padding: 5px;
         }
-        header{
+
+        header {
             width: 100% auto;
-            padding:  20px 0;
+            padding: 20px 0;
         }
-        .admit-box>div{
+
+        .admit-box>div {
             margin: 30px 0;
         }
-        iframe{
+
+        iframe {
             width: 100%;
             background-color: white;
         }
-        .admit-box>div>a{
+
+        .admit-box>div>a {
             float: right;
         }
-        #nextbutton{
+
+        #nextbutton {
             float: right;
             width: 100%;
             height: 50px;
-            
+
         }
+
         /* #nextbutton >a{
             width: 100%;
         } */
-        #nextbutton>button{
+        #nextbutton>a>button {
             width: 100%;
-            background-color:#FF8A7A;
+            background-color: #FF8A7A;
             color: aliceblue;
             height: 50px;
             border-radius: 5%;
             font-size: 30px;
         }
+
+        #nextbutton>a {
+            width: 100%;
+            background-color: #FF8A7A;
+            color: aliceblue;
+            height: 50px;
+            border-radius: 5%;
+            font-size: 30px;
+        }
+
         header img {
             width: 150px;
             height: 50px;
         }
+
         a:link {
             color: black;
 
@@ -71,13 +89,64 @@
             color: black;
         }
     </style>
+    <style>
+        footer {
+
+            text-align: center;
+            background-color: #e6e1e1;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer li {
+            padding-bottom: 30px;
+        }
+
+        .footerdiv {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .footerdiv:nth-child(1) {
+            padding-top: 50px;
+        }
+
+        .footerdiv:nth-child(2),
+        .footerdiv:nth-child(3) {
+            padding-top: 100px;
+        }
+
+        a:link {
+            color: black;
+
+        }
+
+        a:visited {
+            color: black;
+        }
+    </style>
+    <script>
+        $(loadedHandler);
+        function loadedHandler() {
+            $("#alladmit").on("click", allAdmitHandler);
+
+        }
+
+        function allAdmitHandler() {
+
+            var allchecked = $(this).prop("checked");
+            $(".admit").prop("checked", allchecked);
+        }
+
+    </script>
 </head>
 
 <body>
     <div class="body-bg">
         <div class="body-width">
             <header>
-                <a href="/html/main_page.html"><img src="/images/icons/SEATO jpg.jpg" ></a>
+                <a href="../html/main_page.html"><img src="../images/icons/SEATO jpg.jpg"></a>
             </header>
             <form class="admit-box" method="post" action="./sign-in-confirm.html">
                 <div>
@@ -87,31 +156,58 @@
                     </div>
                 </div>
                 <div>
-                    <input type="radio" name="admit1" id="admit1" required><label>[필수]네이버 이용약관</label>
-                    <iframe src="../html/네이버 이용약관.ini" ></iframe>
+                    <input type="checkbox" name="admit1" class="admit" required><label>[필수]네이버 이용약관</label>
+                    <iframe src="../html/네이버 이용약관.ini"></iframe>
                 </div>
                 <div>
-                    <input type="radio" name="admit2" id="admit2" required><label>[필수] 개인정보 수집 및 이용 </label>
-                    <iframe src="../html/네이버 이용약관.ini" ></iframe>
+                    <input type="checkbox" name="admit2" class="admit" required><label>[필수] 개인정보 수집 및 이용 </label>
+                    <iframe src="../html/네이버 이용약관.ini"></iframe>
                 </div>
                 <div>
-                    <input type="checkbox" name="admit3" id="admit3" ><label>[선택]실명 인증된 아이디로 가입</label>
-                    <iframe src="../html/네이버 이용약관.ini" ></iframe>
+                    <input type="checkbox" name="admit3" class="admit"><label>[선택]실명 인증된 아이디로 가입</label>
+                    <iframe src="../html/네이버 이용약관.ini"></iframe>
                 </div>
                 <div>
-                    <input type="checkbox" name="admit4" id="admit4" ><label>[선택]위치기반서비스 이용약관</label>
-                    <iframe src="../html/네이버 이용약관.ini" ></iframe>
+                    <input type="checkbox" name="admit4" class="admit"><label>[선택]위치기반서비스 이용약관</label>
+                    <iframe src="../html/네이버 이용약관.ini"></iframe>
                 </div>
                 <div>
-                    <input type="checkbox" name="admit5" id="admit5" ><label>[선택] 이벤트・혜택 정보 수신</label>
-                    <iframe src="../html/네이버 이용약관.ini" ></iframe>
+                    <input type="checkbox" name="admit5" class="admit"><label>[선택] 이벤트・혜택 정보 수신</label>
+                    <iframe src="../html/네이버 이용약관.ini"></iframe>
                 </div>
                 <div>
-                    <a href="https://nid.naver.com/user2/join/groupJoin?lang=ko_KR"><p>단체, 비즈니스 회원 가입</p></a>
+                    <a href="https://nid.naver.com/user2/join/groupJoin?lang=ko_KR">
+                        <p>단체, 비즈니스 회원 가입</p>
+                    </a>
                 </div>
-                <div  id="nextbutton"><button type="submit">다음</button></div>
-            </div>
+                <div id="nextbutton"><a href="../html/sign-in-confirm.html"><button type="submit">다음</button></a></div>
         </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <ul>
+                <li style="border: 1.2em;">문토 정보</li>
+                <li><a href="###"> 공지사항</a></li>
+                <li><a href="###">이벤트</a></li>
+                <li><a href="###">자주묻는 질문</a></li>
+                <li><a href="###">채용</a></li>
+            </ul>
+        </div>
+        <div class="footerdiv">
+            <ul>
+                <li>소셜 미디어</li>
+                <li><a href="http://instagram.com">인스타그램</a></li>
+                <li><a href="http://naver.com">네이버 블로그</a></li>
+            </ul>
+        </div>
+        <div class="footerdiv">
+            <h3>주식회사 문토</h3>
+            <br>
+            <p>대표: 염호준 | 개인정보관리책임</p>
+            <p>대표: 이지영 | 개인정보관리책임</p>
+            <p>대표: 김종호 | 개인정보관리책임</p>
+        </div>
+    </footer>
     </div>
 </body>
 
