@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/FirstRowRt/stylesheet/reset.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+ 
+    <link href="../stylesheet/reset.css" rel="stylesheet">
+    <title>SEATO 클럽</title>
+    <script>
+    </script>
+    <style>
+        .socialingcard_tag {
+            letter-spacing: -.4px;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 8px 13px;
+            border-radius: 16px;
+            background-color: #f4f4f4;
+            color: #666060;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            text-align: center;
+            margin-right: 6px;
+        }
+        .socialingcard_recommend {
+            letter-spacing: -.4px;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 8px 13px;
+            border-radius: 16px;
+            background-color: #feebea;
+            color: #f43630;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 19px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .socialingcard_info_subject {
+            width: 100%;
+            height: 33px;
+            margin-bottom: 7px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: 600;
+            letter-spacing: -.4px;
+            color: #383535;
+        }
+
+        .socialingcard_info_describe {
+            height: 30px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: row;
+            font-weight: 400;
+            color: #999696;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+        }
+
+        .socialing_category_item {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 60px;
+            letter-spacing: -1px;
+            color: #383535;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-right: 30px;
+            white-space: nowrap;
+            cursor: pointer;
+            min-height: 78px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .combine {
+            background-color: #e6e1e1;
+            display: flex;
+            width: 80%;
+            height: 80px;
+            padding: 0 10%;
+            position: fixed;
+            z-index: 999;
+        }
+
+        .imageLogo {
+            margin: 20px;
+        }
+
+        .imageLogo>a>img {
+            width: 120px;
+            height: 40px;
+        }
+
+        .headleft {
+            flex: 80%;
+            height: 80px;
+            font-family: Pretendard-Medium;
+
+        }
+
+        .headright {
+            display: flex;
+        }
+
+        header .headermenu {
+            margin: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            line-height: 80px;
+
+        }
+        .headermenu:hover{
+            text-decoration: underline 0.1em;
+            text-underline-offset: 0.5em;
+        }
+
+        header .headerSignup {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            margin: 20px 0;
+
+        }
+
+        header .headerLogin {
+
+            padding-left: 10px;
+            vertical-align: middle;
+            margin: 20px;
+
+        }
+
+        .bg {
+            background-color: antiquewhite;
+            /* 여기는 색깔 바꿔줘야함 */
+        }
+    </style>
+    <!--body style-->
+    <style>
+        .descript_menu {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            height: 500px;
+            background-color: white;
+            padding-top: 80px;
+
+        }
+
+        .descript_lounge {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .title_lounge {
+            font-size: 24px;
+            color: #1c8a6a;
+            margin: 0px 0px 24px;
+            font-family: Pretendard-Bold;
+
+        }
+
+        .description_lounge {
+            font-size: 44px;
+            color: black;
+            margin: 0px 0px 32px;
+            font-family: Pretendard-Bold;
+        }
+
+        .content_lounge {
+            font-size: 22px;
+            color: black;
+            font-family: Pretendard-Regular;
+
+        }
+    </style>
+    <style>
+        /* descript 영역 */
+        .socialing_title {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .socialing_description {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .socialing_description_content {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+    <style>
+        /* 슬라이드 영역 */
+
+        .container, .container1 {
+            display: flex;
+            justify-content: center;
+            background-color: b9b6b6;
+        }
+
+        .category_content {
+            display: grid;
+            grid-template-columns: repeat(2, 517px);
+            grid-auto-rows: 200px;
+            padding-top: 40px;
+            column-gap: 24px;
+            row-gap: 24px;
+            justify-content: center;
+        }
+
+        .category_content>div {
+            background-color: #fff;
+            border-radius: 12px;
+        }
+
+        .item {
+            display: flex;
+            padding: 20px 16px;
+            width: auto;
+            height: auto;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        .item img {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            margin-right: 16px;
+        }
+
+        .category_content_card_list {
+            height: auto;
+            width: 300px;
+        }
+
+        .category_content_card,
+        .socialingcard_info_describe,
+        .socialingcard_info_participants {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .category_content_card {
+            height: 35px;
+            margin-bottom: 5px;
+        }
+
+        .socialingcard_info_describe {
+            height: 30px;
+            margin-bottom: 12px;
+
+        }
+
+        .socialingcard_info_subject {
+            width: 100%;
+            height: 33px;
+            margin-bottom: 7px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .socialingcard_info_participants {
+            height: 35px;
+            margin-bottom: 3px;
+        }
+
+        content>div>article>nav {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        .socialing_category {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            position: sticky;
+            top: 0;
+
+        }
+
+        .socialing_category>li {
+            display: flex;
+            height: 78px;
+            line-height: 78px;
+            margin-right: 30px;
+            align-items: center;
+        }
+
+        .socialing_category>li>button {
+            all: unset;
+        }
+
+        .socialing_category>li:first-of-type {
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+    <!--body style-->
+    <style>
+        .descript_lounge {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .description_lounge {
+            font-size: 44px;
+            color: black;
+            margin: 0px 0px 32px;
+            font-family: Pretendard-Bold;
+        }
+
+        .content_lounge {
+            font-size: 22px;
+            color: black;
+            font-family: Pretendard-Regular;
+
+        }
+    </style>
+    <!--feed_cards style-->
+    <style>
+        /* table {
+            border: 1px black solid;
+
+        } */
+
+        .feed_cards>input[type=radio] {
+            display: none;
+        }
+
+        .feed_card {
+            display: flex;
+            position: relative;
+            left: 0;
+            transition-property: left;
+            transition-duration: 1s;
+        }
+
+        .feed_card .tab-card1 {
+            /* display: none; */
+            margin-top: 40px;
+            margin-right: 10%;
+            margin-left: 15%;
+        }
+
+        .feed_card .tab-card2 {
+            margin-top: 40px;
+            margin-right: 15%;
+            margin-left: 25%;
+
+        }
+
+        .feed_cards input[type=radio]:nth-of-type(1):checked~.feed_card {
+            /* display: block; */
+            left: 0;
+        }
+
+        .feed_cards input[type=radio]:nth-of-type(2):checked~.feed_card {
+            /* display: block; */
+            left: -100%;
+        }
+
+
+        .feed_cards .flex-labels {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: white;
+            border-bottom: grey solid 1px;
+        }
+
+        .feed_cards .flex-labels>label {
+            display: flex;
+            width: 101px;
+            height: 62px;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; 임시 */
+            box-sizing: border-box;
+            color: #b9b6b6;
+
+        }
+
+        label:hover {
+            cursor: pointer;
+        }
+
+        .feed_cards .labels {
+            overflow: hidden;
+        }
+
+        .feed_cards>input[type=radio]:nth-of-type(1):checked~.flex-labels>label:nth-of-type(1) {
+            color: black;
+            border-bottom: black solid 2px;
+        }
+
+        .feed_cards>input[type=radio]:nth-of-type(2):checked~.flex-labels>label:nth-of-type(2) {
+            color: black;
+            border-bottom: black solid 2px;
+        }
+
+        .card-table {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardimage {
+            width: 274px;
+            height: 274px;
+            /* border: 1px black solid; */
+
+        }
+
+        .cardimage .images {
+            width: 274px;
+            height: 274px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .cardimage .images img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .cardtxt {
+            width: 274px;
+            height: 44px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        td {
+            padding: 0 20px 0 0;
+        }
+
+        td:nth-child(4) {
+            padding: 0;
+        }
+    </style>
+    <!--footer style-->
+    <style>
+        .footerBox{
+            width: 80%;
+            height: 500px;
+            padding: 0 10% auto;
+        }
+        * {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        footer {
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            height: 500px;
+            font-family: Pretendard-Semibold;
+            font-size: 14px;
+            padding-top: 80px;
+
+        }
+
+        footer li, p {
+            margin: 14px 0;
+        }
+
+        footer div:nth-child(1) {
+            position: absolute;
+            left: 10%;
+        }
+
+        footer div:nth-child(2) {
+            position: absolute;
+            left: 45%;
+
+        }
+
+        footer div:nth-child(3) {
+            position: absolute;
+            right: 10%;
+            clear: both;
+        }
+        .footerHead{
+            color:  #666;
+        }
+
+        a:link {
+            color: black;
+
+        }
+
+        a:visited {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div> <!-- header영역 -->
+
+        <header>
+            <div class="combine_cover">
+                <div class="combine">
+                    <div class="imageLogo">
+                        <a href="/html/main_page.html"><img src="../images/icons/SEATO jpg.jpg"></a>
+                    </div>
+                    <div class="headleft">
+                        <a href="social_page.html" class="headermenu">소셜링</a>
+                        <a href="#" class="headermenu">클럽</a>
+                        <a href="challenge_page.html" class="headermenu">챌린지</a>
+                        <a href="lounge.html" class="headermenu">라운지</a>
+                    </div>
+                    <div class="headright">
+                        <div class="headerSignup">
+                            <a href="/html/sign-in.html"> <img src="../images/icons/SIGNUP jpg.jpg" width="100"></a>
+                        </div>
+                        <div class="headerLogin">
+                            <a href="/html/loginpage.html"> <img src="../images/icons/LOGIN jpg.jpg" width="100"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="descript_menu">
+            <div class="descript_lounge">
+                <div class="title_lounge">
+                    <img class="loungeTitle" src="https://images.munto.kr/munto-web/ic_info_clubleader_16px.svg"
+                        width="24" height="24"> 클럽
+                </div>
+                <div class="description_lounge">
+                    지속형 모임으로
+                    <br>계속해서 친하게 지내요
+                </div>
+                <div class="content_lounge">
+                    나와 같은 관심사를 가진 친구들과
+                    <br>매일 함께하고 싶다면 클럽에서 만나요!
+                </div>
+            </div>
+        </div>
+    </div> <!-- header영역 -->
+    <div> <!-- content영역 -->
+        <content>
+            <div>
+                <article>
+                    <!-- 메뉴영역 -->
+                    <nav>
+                        <ul class="socialing_category">
+                            <li class="socialing_category_item" onclick="categoty(0)">전체</li>
+                            <li class="socialing_category_item" onclick="categoty(1)"><img
+                                    src="https://images.munto.kr/munto-web/culture_icon.svg" width="17.33px"
+                                    height="26px">문화·예술</li>
+                            <li class="socialing_category_item" onclick="categoty(2)"><img
+                                    src="https://images.munto.kr/munto-web/activite_icon.svg" width="17.33px"
+                                    height="26px">운동·액티비티</li>
+                            <li class="socialing_category_item" onclick="categoty(3)"><img
+                                    src="https://images.munto.kr/munto-web/food_icon.svg" width="17.33px"
+                                    height="26px">푸드·드링크</li>
+                            <li class="socialing_category_item" onclick="categoty(4)"><img
+                                    src="https://images.munto.kr/munto-web/hobby_icon.svg" width="17.33px"
+                                    height="26px">취미</li>
+                            <li class="socialing_category_item" onclick="categoty(5)"><img
+                                    src="https://images.munto.kr/munto-web/trip_icon.svg" width="17.33px"
+                                    height="26px">여행·동행</li>
+                            <li class="socialing_category_item" onclick="categoty(6)"><img
+                                    src="https://images.munto.kr/munto-web/growth_icon.svg" width="17.33px"
+                                    height="26px">성장·자기계발</li>
+                            <li class="socialing_category_item" onclick="categoty(7)"><img
+                                    src="https://images.munto.kr/munto-web/icon_category_peer.svg" width="28px"
+                                    height="48px">동네·또래</li>
+                            <li class="socialing_category_item" onclick="categoty(8)"><img
+                                    src="https://images.munto.kr/munto-web/icon_category_blind-date.svg" width="28px"
+                                    height="48px">연애·소개팅</li>
+                        </ul>
+                    </nav>
+                    <!-- 슬라이드 영역 -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="swiper-slide0">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide1">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide2">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide3">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide4">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide5">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide6">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide7">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"  id="swiper-slide8">
+                                <div class="container">
+                                    <div class="category_content">
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1686804022464-photo-bjzwq-543559-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">러닝</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">7월3일 월요일 안양천 슬로우런&만보걷기함께하실분
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.3(월) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687678521480-photo-k5z48-464580-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">클래스기획전</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">밤편지에 맞춰 한국무용 원데이🌟</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>관악구 · </div>
+                                                        <div>7.4(화) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1681960214794-photo-hpqq7-548082-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">타코야끼파티</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">🐙일본인 친구들과 함께 즐기는 핵존잼 & 핵꿀맛
+                                                        타코야키 파티 🦑🥰 With 핵꿀맛 하이볼🍹</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1679131681868-photo-y5xmr-486807-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">요리</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">따듯한 음식 한끼 [퇴근하고 오늘 뭐먹지?]🙋
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>마포구 · </div>
+                                                        <div>7.5(수) 오후 8:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1688031429890-photo-d3yxr-56296-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">테마파크</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">파라다이스시티 씨메르로 당일 피서 가요~</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1687848491303-photo-kf1sq-30236-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">전시</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[7/6 청담] 이벤트⭐️ 도슨트와 갤러리투어 &
+                                                        칵테일 한 잔</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>강서구 · </div>
+                                                        <div>7.6(목) 오전 11:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1685952339545-photo-fc0dt-417243-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소개팅</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">💚러브캐처 EP164💚</div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>중구 · </div>
+                                                        <div>7.6(목) 오후 7:30</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="item">
+                                                <div><img
+                                                        src="http://images.munto.kr/production-socialing/1682011773831-photo-zg2yx-529935-0?s=384x384"
+                                                        alt=""></div>
+                                                <div class="category_content_card_list">
+                                                    <div class="category_content_card">
+                                                        <div class="socialingcard_tag">소울메이트</div>
+                                                        <div class="socialingcard_recommend">추천</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_subject">[PREMIUM] 운명의 소울메이트 찾기 -★
+                                                    </div>
+                                                    <div class="socialingcard_info_describe">
+                                                        <div>소셜링 ·</div>
+                                                        <div>온라인 · </div>
+                                                        <div>7.6(목) 오후 9:00</div>
+                                                    </div>
+                                                    <div class="socialingcard_info_participants">
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </content>
+    </div> <!-- content영역 -->
+    <div> <!-- footer영역 -->
+        <footer>
+            <div class="footerBox">
+            <div>
+                <ul>
+                    <li class="footerHead">문토 정보</li>
+                    <li><a href="###"> 공지사항</a></li>
+                    <li><a href="###">이벤트</a></li>
+                    <li><a href="###">자주묻는 질문</a></li>
+                    <li><a href="###"></a></li>
+                    <li><a href="###">채용</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="footerHead">소셜 미디어</li>
+                    <li><a href="###">인스타그램</a></li>
+                    <li><a href="###">네이버 블로그</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footerHead">주식회사 문토</p>
+                <p>대표: 염호준 | 개인정보관리책임</p>
+                <p>대표: 이지영 | 개인정보관리책임</p>
+                <p>대표: 김종호 | 개인정보관리책임</p>
+            </div>
+        </div>
+        </footer>
+    </div> <!-- footer영역 -->
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+        function categoty(num) {
+            swiper.slideTo(num, 500, false)
+        }
+    </script>
+       <script src="../scripts/social.js"></script>
+</body>
+
+</html>
