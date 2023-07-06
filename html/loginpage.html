@@ -120,6 +120,60 @@
         a:visited {
             color: black;
         }
+        </style>
+        <style>
+      @media(max-width:900px) {
+        .all-background {
+            width: 100%;
+
+        }
+        footer{
+            /* padding: 0 35%; */
+            display: inline;
+        }
+        .footerdiv{
+            padding: 20px 0 0 0;
+        }
+        .footerdiv:nth-child(1),
+    .footerdiv:nth-child(3) {
+      
+       opacity: 0;
+       height: 0;
+     
+    }
+   
+    .footerdiv:nth-child(2){
+        padding: 0;
+        margin: 0;
+    }
+    .body-width {
+        padding: 10% 20% 5% 20%;
+    }
+    .member-info{
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            margin: 200px 0 100px 0;
+            padding: 20px;
+            border: 1px solid #FF8A7A;
+           
+            box-sizing: border-box;
+            border-radius: 5%;
+
+        }
+        .member-be {
+            /* width: 80%; */
+            text-align: center;
+            overflow: hidden;
+            margin: 200px 0 50px 0;
+            padding: 20px;
+            border: 5px solid #FF8A7A;
+            border-radius: 20px;
+            box-sizing: border-box;
+            align-items: center;
+
+        }
+    }
     </style>
 </head>
 
@@ -148,7 +202,7 @@
            
         </div>
         <footer>
-            <div>
+            <div class="footerdiv">
                 <ul>
                     <li style="border: 1.2em;">문토 정보</li>
                     <li><a href="###"> 공지사항</a></li>
@@ -157,14 +211,14 @@
                     <li><a href="###">채용</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="footerdiv">
                 <ul>
                     <li>소셜 미디어</li>
                     <li><a href="http://instagram.com">인스타그램</a></li>
                     <li><a href="http://naver.com">네이버 블로그</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="footerdiv">
                 <h3>주식회사 문토</h3>
                 <br>
                 <p>대표: 염호준 | 개인정보관리책임</p>
